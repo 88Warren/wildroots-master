@@ -1,0 +1,1524 @@
+/*all pages*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'amsterdam';
+    src: url('font/amsterdamone-ez12l-webfont.woff2') format('woff2');
+    font-display: fallback;
+    
+}
+
+@font-face{
+    font-family: 'dual';
+    src: url('font/dual-300-webfont.woff2') format('woff2');
+    font-display: fallback;
+}
+
+.specialQuotes{
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.specialP{
+    display: inline-block;
+    position: right;
+    padding-bottom: 20px;
+    font-weight: 900;
+}
+
+button{
+    height: 80px;
+    width: 200px;
+    font-family: 'amsterdam', Fallback,  brush script MT;
+    font-size: 24px;
+    background:#cb5728;
+    border: none;
+    border-radius: 20px;
+    font-weight: normal;
+    transition: all 100ms ease-in-out;
+}
+
+button:hover{
+    border: #000 2px solid;
+    cursor: pointer;
+}
+
+/*header*/ 
+nav{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 65px;
+    grid-template-areas: "logo menu social";
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+}
+
+nav.transparent{
+    background-color: #000000;
+    transition: 1s;
+}
+
+nav.colored{
+    background-color: #000;
+    opacity: 0.6;
+    transition: 1s;
+}
+
+.logo a{
+    grid-area: logo;
+    font-size: x-large;
+}
+
+.logo a :hover{
+    padding: 2px;
+    border: #cb5827 2px solid;
+}
+
+.menu button{
+    height: 40px;
+    width: 100px;
+    font-family: 'amsterdam', Fallback,  brush script MT;
+    font-size: 14px;
+    background:#cb5728;
+    border: none;
+    border-radius: 20px;
+    font-weight: normal;
+}
+
+.menu li{
+    float: left;
+}
+
+.menu a{
+    grid-area: menu;
+    align-self: center;
+    justify-items: center;
+    font-size: large;
+    font-family: 'dual', Fallback, sans-serif;
+    padding-left: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: #cb5827;
+}
+
+.social{
+    grid-area: social;
+}
+
+.social img{
+    border: #000 2px solid;
+    border: hidden;    
+}
+
+.social img:hover{
+    border: #cb5827 2px solid;
+}
+
+.instagram{
+    margin-right: 10px;
+}
+
+.facebook{
+    padding-bottom: 3px;
+    margin-right: 10px;
+}
+
+.linkedin{
+    margin-right: 10px;
+}
+
+[aria-controls="menu-list"] {
+    display: none;
+}
+
+/*Home Page*/
+/*hero image*/
+.hero{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px;
+    grid-template-areas: "hero";
+}
+
+.heroImage{
+    grid-area: hero;
+    height: 600px;
+    background-image: url("Images/wild-roots-christmas-15.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img{
+    opacity: 0.8;
+    padding: 30px;
+    background-color: white;
+    border: #000 6px double;
+}
+
+.vision{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 350px;         
+}
+
+.vision h1{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'amsterdam', Fallback, brush script MT;
+    letter-spacing: 2px;
+    font-size: 36px;
+}
+
+.vision h1:before, .vision h1:after{
+    display: block;
+    content: ' ';
+    height: 8px;
+    background-image: linear-gradient(right,  #cb5827, transparent);
+    background-image: -moz-linear-gradient(right,  #cb5827, transparent);
+    background-image:-webkit-linear-gradient(right,  #cb5827, transparent);
+    background-image:-ms-linear-gradient(right,  #cb5827, transparent);
+    background-image:-o-linear-gradient(right,  #cb5827, transparent);
+}
+
+.vision h1:after{
+    background-image: linear-gradient(left, #cb5827, transparent);
+    background-image: -moz-linear-gradient(left,   #cb5827, transparent);
+    background-image:-webkit-linear-gradient(left,  #cb5827, transparent);
+    background-image:-ms-linear-gradient(left,  #cb5827, transparent);
+    background-image:-o-linear-gradient(left,  #cb5827, transparent);
+}
+
+.mission{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 400px;
+    gap: 20px;
+    grid-template-areas: "roots blurb";
+}
+
+.roots{
+    grid-area: roots;
+    margin: 15px;
+    padding-left: 40px;
+    width: 450px;
+    height: 350px;
+    filter: brightness(180%);
+}
+
+.blurb {
+    grid-area: blurb;
+    padding-right: 10px;
+    margin: 15px;
+    text-align: justify;
+    font-family: 'dual', Fallback, sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.banner{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px;
+    grid-template-areas: "banner";
+    background-image: url("Images/afternoon-tea-88.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: -1;
+    font-weight: 900;
+    }
+
+.bannerImage{
+    grid-area: banner;
+    background-color: rgba(0, 0,  0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+
+.brag{
+    color:#fff;
+    font-family: 'dual', Fallback, sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.actions{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 350px;
+}
+
+.actions h1{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'amsterdam', Fallback, brush script MT;
+    letter-spacing: 2px;
+    font-size: 36px;
+}
+
+.actions h1::before, .actions h1::after{
+    display: block;
+    content: ' ';
+    height: 8px;
+    background-image: linear-gradient(right,  #cb5827, transparent);
+    background-image: -moz-linear-gradient(right,  #cb5827, transparent);
+    background-image:-webkit-linear-gradient(right,  #cb5827, transparent);
+    background-image:-ms-linear-gradient(right,  #cb5827, transparent);
+    background-image:-o-linear-gradient(right,  #cb5827, transparent);
+}
+
+.actions h1::after{
+    background-image: linear-gradient(left, #cb5827, transparent);
+    background-image: -moz-linear-gradient(left,   #cb5827, transparent);
+    background-image:-webkit-linear-gradient(left,  #cb5827, transparent);
+    background-image:-ms-linear-gradient(left,  #cb5827, transparent);
+    background-image:-o-linear-gradient(left,  #cb5827, transparent);
+}
+
+.bullets{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    margin-bottom: 5em;
+    grid-template-areas: 
+    ". plant plant . wls wls . "
+    ". inclusive inclusive . sustainable sustainable . ";
+}
+
+.bullets h1{
+    font-family:  'amsterdam', Fallback,  brush script MT;
+    text-align: center;
+    padding: 5px 0 15px 0;
+    letter-spacing: 5px;
+    word-spacing: 9px;
+    font-size: 24px;
+}
+
+.bullets p{
+    font-family: "dual", Fallback, sans-serif;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.bullets img{
+    width: 300px;
+    height: 150px;
+    /* border-radius: 50px; */
+}
+
+.bullets a, .compost a, .plant a, .downloadMain a, .downloadMainTwo a{
+    font-family: 'dual', fallback, sans-serif;
+    padding: 10px;
+    color: #cb5827;
+    font-weight: 900;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.bullets a:hover, .compost a:hover, .plant a:hover, .downloadMain a:hover{
+    font-style: normal;
+}
+
+.more {display: none;}
+
+.myBtn{ 
+    border: none;
+    background: none;
+    font-family: 'dual', fallback, sans-serif;
+    height: 50px;
+    font-size: 16px ;
+}
+
+.myBtn:hover{
+    border: none;
+}
+
+.wls{
+    grid-area: inclusive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wls p{
+    padding-bottom: 16px;
+}
+
+.inclusive{
+    grid-area: sustainable;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.inclusive p{
+    padding-bottom: 10px;
+}
+
+.supply button{
+    margin-bottom: 30px;
+}
+
+.supply{
+    grid-area: wls;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.supply p{
+    padding-top: 30px;
+    padding-bottom: 4px;
+}
+
+.plant{
+    grid-area: plant;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plant p{
+    padding-bottom: 10px;
+}
+
+.plant button{
+    margin-bottom: 20px;
+}
+
+.testimonial{
+    font-weight: 900;
+}
+
+/*Sustainable Caters*/
+.specialWord{
+    color:#cb5728;
+    font-weight: 900;
+}
+
+.heroSC{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px;
+    grid-template-areas: "heroSC";
+}
+
+.heroImageSC{
+    grid-area: heroSC;
+    min-height: 400px;
+    background-image: url("Images/sc/heroSC.jpg");
+    background-size: cover;
+    background-position: top left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(150%);
+}
+
+.heroSC h1{
+    font-family: 'amsterdam', fallback, brush script MT;
+    color: #cb5728;
+    background-color: white;
+    padding: 30px 75px;
+    border: #000 6px double;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.blurbSC{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "image p";
+}
+
+.blurbSC img{
+    grid-area: image;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 400px;
+    padding-top: 20px;
+}
+
+.blurbPSC{
+    grid-area: p;
+    font-family: 'dual', Fallback, sans-serif;
+    padding: 20px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+/* .team{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 500px;
+    grid-template-areas: "photo h";
+} */
+
+/* .team img{
+    grid-area: photo;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-self: center;
+    border-radius: 20px;
+    margin: 20px;
+} */
+
+/* .team2{
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+} */
+
+/* .team2 p{
+    grid-area: h;
+    text-align: left;
+    font-family: 'dual', Fallback, sans-serif;
+    font-size: 16px;
+    color: black;
+    padding: 20px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+} */
+/* 
+.team2 h1{
+    font-family: 'amsterdam', Fallback, brush script MT;
+    font-size: 40px;
+    text-align: center;
+    color: #cb5728;
+    padding-top: 40px;
+} */
+
+/* .team2 h2{
+    font-family: 'amsterdam', Fallback, brush script MT;
+    font-size: 40px;
+    text-align: center;
+    color: #cb5728;
+    padding-top: 50px;
+} */
+
+.sustainable{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px;
+    font-family: 'amsterdam', Fallback,  brush script MT;
+    color: #cb5728;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding-left: 50px;
+}
+
+.sustainableMain{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    grid-template-areas: 
+    "plant compost workwear"
+    "shop give plastic";
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.T{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 350px;  
+}
+
+.T h2{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'amsterdam', Fallback, brush script MT;
+    letter-spacing: 2px;
+    font-size: 36px;
+}
+
+.T h2:before, .T h2::after{
+    display: block;
+    content: ' ';
+    height: 8px;
+    background-image: linear-gradient(right,  #cb5827, transparent);
+    background-image: -moz-linear-gradient(right,  #cb5827, transparent);
+    background-image:-webkit-linear-gradient(right,  #cb5827, transparent);
+    background-image:-ms-linear-gradient(right,  #cb5827, transparent);
+    background-image:-o-linear-gradient(right,  #cb5827, transparent);
+}
+
+.T h2:after{
+    background-image: linear-gradient(left, #cb5827, transparent);
+    background-image: -moz-linear-gradient(left,   #cb5827, transparent);
+    background-image:-webkit-linear-gradient(left,  #cb5827, transparent);
+    background-image:-ms-linear-gradient(left,  #cb5827, transparent);
+    background-image:-o-linear-gradient(left,  #cb5827, transparent);
+}
+
+.sustainableMain h1, .downloadMain h1, .downloadMainTwo h1{
+    font-family: 'amsterdam', Fallback,  brush script MT;
+    text-align: center;
+    padding: 5px 0 15px 0;
+    letter-spacing: 2px;
+}
+
+.sustainableMain p{
+    font-family: 'dual', Fallback, sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.sustainableMain img, .downloadMain img, .downloadMainTwo img{
+    width: 300px;
+    height: 150px;
+    /* border-radius: 50px; */
+}
+
+.workwear a{
+    color: #cb5728;
+}
+
+.plant{
+    grid-area: plant;
+}
+
+.workwear{
+    grid-area: workwear;
+}
+
+.store{
+    grid-area: shop;
+}
+
+.compost{
+    grid-area: compost;
+}
+
+.compost p{
+    padding-bottom: 10px;
+}
+
+.compost a{
+    text-align: center;
+}
+
+.plastic{
+    grid-area: plastic;
+}
+
+.give{
+    grid-area: give;
+}
+
+.textbox{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows:  repeat(2, 105px); 
+    grid-template-areas: ". textbox ." ". button .";
+}
+
+.textboxP{
+    grid-area: textbox;
+    padding: 20px 10px 10px 10px;
+    font-family: 'dual', Fallback, sans-serif;
+    color: #cb5728;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.textboxB{
+    grid-area: button;
+    font-family: 'dual', Fallback, sans-serif;
+    margin-bottom: 20px;
+    align-self: center;
+    justify-self: center;
+}
+
+.goals img{
+    display: inline;
+    width: 10em;
+    margin: 2em;
+}
+
+.goals p{
+    font-family: 'dual', Fallback, sans-serif;
+    font-size: 1.5em;
+    line-height: 2em;
+    text-align: center;
+    padding-top: 2em;
+}
+
+/* downloads */
+.heroD{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "heroD";
+}
+
+.heroImageD{
+    grid-area: heroD;
+    min-height: 400px;
+    background-image: url("Images/downloads/download.jpg");
+    background-size: cover;
+    background-position: center left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(150%);
+}
+
+.heroD h1{
+    font-family: 'amsterdam', fallback, brush script MT;
+    color: #cb5728;
+    background-color: white;
+    padding: 30px 75px;
+    border: #000 6px double;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.blurbD{
+    font-family: 'dual', Fallback, sans-serif;
+    padding: 20px;
+    letter-spacing: 1px;
+    line-height: 2.5em;
+    margin: 1em;
+    text-align: center;
+    font-weight: 550;
+}
+
+.niftyGuide{
+    margin:0 auto;
+    display: block;
+}
+
+.niftyGuide p{
+    font-family: 'dual', Fallback, sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 900;
+    padding-bottom: 1em;
+}
+
+.niftyGuide button{
+    margin:0 auto;
+    display: block;
+    height: 3em;
+    width: 13em;  
+    padding-bottom: 3.5em;
+}
+
+.niftyGuide a{
+    color: #000;
+}
+
+.explaination{
+    font-family: 'dual', Fallback, sans-serif;
+    text-align: center;
+    font-size: 1em;
+    line-height: 2.5em;
+    letter-spacing: 1px;
+    margin: 1em;
+    padding-bottom: 1em;
+}
+
+.downloadMain{
+    display: grid;
+    grid-template-columns: repeat (2, 1fr);
+    grid-template-rows: auto;
+    gap: 1em;
+    grid-template-areas: 
+    "menus party";
+}
+
+.menus{
+    grid-area: menus;
+}
+
+.orders{
+    grid-area: orders;
+}
+
+.virtualParty{
+    grid-area: party;
+}
+
+.downloadMainTwo{
+    display: grid;
+    grid-template-columns: repeat (2, 1fr);
+    grid-template-rows: auto;
+    gap: 1em;
+    margin-top: 5em;
+    grid-template-areas: 
+    "romantic wedding";
+}
+
+.romanticNight{
+    grid-area: romantic;
+}
+
+.weddingMenu{
+    grid-area: wedding;
+}
+
+.menus, .orders, .virtualParty, .romanticNight, .weddingMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    font-family: 'dual', Fallback, sans-serif;
+    grid-template-areas: 
+    "trust"
+    "leader";
+}
+
+.trust{
+    grid-area: trust;
+}
+
+.trust p{
+    font-family: 'dual', Fallback, sans-serif;
+    text-align: center;
+    line-height: 2.5em;
+    letter-spacing: 1px;
+}
+
+.trust button{
+    margin:0 auto;
+    display: block;
+    height: 3em;
+    width: 13em;  
+    margin-top: 2em;
+    padding-bottom: 3.5em;
+}
+
+.theLeader{
+    grid-area: leader;
+}
+
+.theLeader h2, .feedback h2{
+    margin-top: 2em;
+    text-align: center;
+    font-family: 'dual', Fallback, sans-serif;
+}
+
+.theLeader h2{
+    margin-bottom: 1.2em;
+}
+
+.allLinks{
+    display: flex;
+    align-items:flex-start;
+    justify-content:center;
+}
+
+.tLinks{
+    margin-left: 1.2em;
+}
+
+.fbLink{
+    margin:0 1.2em;
+}
+
+/*contact page*/
+.heroC{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px;
+    grid-template-areas: "heroC";
+}
+
+.heroImageC{
+    grid-area: heroC;
+    min-height: 400px;
+    background-image: url("Images/c/phone.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroC h1{
+    font-family: 'amsterdam', fallback, brush script MT;
+    color: #cb5827;
+    background-color: white;
+    padding: 30px;
+    border: #000 6px double;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    grid-template-areas: "phone form .";
+    line-height: 1.6;
+    font-family: 'dual', Fallback, sans-serif;
+    margin: auto;
+    padding: 5px;
+    background-color: white;
+}
+
+.heading{
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: 'amsterdam', fallback, brush script MT;
+}
+
+.companyInfo{
+    grid-area: phone;
+    background-color: #cb5827;
+    line-height: 2;
+}
+
+.companyInfo ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    font-size: 20px;
+}
+
+.companyInfo span{
+    font-weight: 900;
+}
+
+.contact{
+    grid-area: form;
+}
+
+/* form styles */
+.contact form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.contact label{
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.contact form p{
+    margin: 0 auto;
+}
+
+.contact input, textarea{
+    height: 35px;
+    width: 350px;
+    padding: 2px;
+    margin-top: 3px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font: 100 20px 'dual';
+}
+
+.contact input:focus, textarea:focus{
+    border: 1px solid black;
+}
+
+.contact textarea{
+    width: 350px; 
+    height: 103px;
+    resize: none;
+}
+
+.error span{
+    color: red;
+}
+
+.success div{
+    color: orange;
+    text-align: center;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+/* shop */
+.heroS{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px;
+    grid-template-areas: "heroS";
+}
+
+.heroImageS{
+    grid-area: heroS;
+    height: 400px;
+    background-image: url("Images/wild-roots-christmas-boxes-11.jpg");
+    background-size: cover;
+    background-position: top left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroS h1{
+    font-family: 'amsterdam', fallback, brush script MT;
+    color: #cb5728;
+    background-color: white;
+    padding: 30px 150px;
+    border: #000 6px double;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.visionS{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 350px; 
+}
+
+.visionS h1{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'amsterdam', Fallback, brush script MT;
+    letter-spacing: 2px;
+    font-size: 36px;
+}
+
+.visionS h1:before, .visionS h1:after{
+    display: block;
+    content: ' ';
+    height: 8px;
+    background-image: linear-gradient(right,  #cb5827, transparent);
+    background-image: -moz-linear-gradient(right,  #cb5827, transparent);
+    background-image:-webkit-linear-gradient(right,  #cb5827, transparent);
+    background-image:-ms-linear-gradient(right,  #cb5827, transparent);
+    background-image:-o-linear-gradient(right,  #cb5827, transparent);
+}
+
+.visionS h1:after{
+    background-image: linear-gradient(left, #cb5827, transparent);
+    background-image: -moz-linear-gradient(left,   #cb5827, transparent);
+    background-image:-webkit-linear-gradient(left,  #cb5827, transparent);
+    background-image:-ms-linear-gradient(left,  #cb5827, transparent);
+    background-image:-o-linear-gradient(left,  #cb5827, transparent);
+}
+
+.shop{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.panel{
+    /* background-color: #000; */
+    border: 6px double #000;
+    border-radius: 10px;
+    padding: 15px 0;
+    width: 100%;
+    max-width: 1160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* media query for mobile would be to set flex-direction: column */
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    /* opacity: 0.93; */
+}
+
+.pricing-plan{
+    border-right: 1px solid #000;
+    padding: 25px 50px;
+}
+
+.pricing-plan:last-child{
+    border-right: none;
+}
+/* mobile view for column
+.pricing-plan{
+    border-bottom: 1px solid #000;
+}
+
+.pricing-plan:last-child{
+    border-bottom: none;
+} */
+
+.pricing-img{
+    margin-bottom: 25px;
+    width: 100%;
+    height: 140px;
+}
+
+.pricing-header{
+    font-family: 'amsterdam', Fallback, brush script MT;
+    color: #cb5827;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 20px;
+}
+
+.pricing-features{
+    color: #000;
+    margin: 50px 0 25px;
+    /* list-style: none; */
+    font-family: 'dual', Fallback, sans-serif;
+    line-height: 1.5;
+}
+
+.pricing-features-item{
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    line-height: 2;
+    font-size: 14px;
+    text-align: left;
+}
+
+.pricing-price{
+    color: #000;
+    font-family: 'dual', Fallback, sans-serif;
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.pricing-button{
+    margin: 25px 0;
+}
+
+/* .pricing-button:hover{
+    border: #fff 2px solid;
+    color: #fff;
+} */
+
+/*footer*/
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    grid-template-areas: 
+    "foot foot foot" 
+    "footer2 footer1 footer3"
+    "footer2a footer1a footer3a";
+    background-color: #cb5827;
+    border-top: black 1px solid;
+    padding-bottom: 20px;
+}
+
+.foot{
+    grid-area: foot;
+    color: black;
+    font-family: 'amsterdam', Fallback, sans-serif;
+    align-items: center;
+    justify-self: center;
+    letter-spacing: 2px;
+}
+
+.footer img{
+    height: 125px;
+    width: 125px; 
+    /* border-radius: 50px; */
+}
+
+.footer h4{
+    color: black;
+    font-family: 'dual', Fallback, sans-serif;
+    text-align: center;
+}
+
+.feet section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.footer1{grid-area: footer1; display: flex; justify-content: center;}
+.footer1 img{width: 150px;}
+.footer1a{grid-area: footer1a;}
+.footer2{grid-area: footer2; display: flex; justify-content: center;}
+.footer2a{grid-area: footer2a;}
+.footer3{grid-area: footer3; display: flex; justify-content: center;}
+.footer3a{grid-area: footer3a;}
+
+#footer4{
+    display: grid;
+    grid-template-columns: 0.3fr 0.5fr 2fr;
+    grid-template-rows: 50px;
+    grid-template-areas: "mark media docs" ". . weddings" "copy copy info";
+    gap: 10px;
+    font-size: 10px;
+    color: white;
+    font-family: 'dual', Fallback, sans-serif;
+    background-color: black;
+    background-size: cover;
+}
+
+#mark{
+    grid-area: mark;
+    align-items: flex-start;
+    padding: 2px;
+    margin: 10px 0 0 20px;
+}
+
+#mark:hover{
+    border: #cb5827 2px solid;
+}
+
+#media{
+    grid-area: media;
+    align-self: center;
+}
+
+#media img{
+    border: #000 2px solid;
+    border: hidden;
+    /* margin: 0 5px 0 5px; */
+}
+
+#media img:hover{
+    border: #cb5827 2px solid;
+}
+
+#docs{
+    grid-area: docs;
+    display: flex;
+    align-items: flex-end;
+    justify-self: flex-end;
+    /* padding-top: 10px; */
+    /* padding-bottom: 7px; */
+    margin-right: 20px;
+    text-align: right;
+
+}
+
+#weddingLinks{
+    grid-area: weddings;
+    text-align: right;
+    padding-right: 20px;
+    margin: 5px;
+}
+
+#instafoot{
+    margin-right: 7px;
+}
+
+#facefoot{
+    padding-bottom: 3px;
+    margin-right: 7px;
+}
+
+#copy{
+    grid-area: copy;
+    background-color: black;
+    background-size: contain;
+    align-items: flex-start;
+    margin: 5px 0 5px 20px;
+}
+
+#info {
+    grid-area: info;
+    background-color: black;
+    background-size: cover;
+    text-align: right;
+    margin: 0px 20px 0px 0;
+}
+
+/*all desktops*/
+@media (min-width: 1200px){
+    /*Home Page*/
+    .dots{display: none;}
+    .myBtn{display: none;}
+    .more{display: contents;}
+}
+
+/*bigger desktop*/
+@media (max-width:1200px){
+    /*Home Page*/
+    .blurb{font-size: 14px;}
+    .dots{display: none;}
+    .myBtn{display: none;}
+    .more{display: contents;}
+    /*Contact*/
+    /*Footer*/
+    .footer{grid-template-rows: auto;}
+}
+
+/*Medium Desktop*/
+@media (max-width:1000px){
+    /*Menu*/
+    [aria-controls="menu-list"] {display: block; grid-area: menu-list;}
+    .menu{perspective: 800px;}
+    .menu ul{max-height: 0; overflow: hidden; transform: rotateX(90deg); transition: all 0.5s;}
+    [aria-expanded="true"] ~ ul{display:grid; max-height: 500px; transform: rotateX(0);}
+    [aria-expanded="false"] .close{display:none;}
+    [aria-expanded="true"] .close{display: inline-block;}
+    [aria-expanded="true"] .open{display: none;}
+    /*Home Page*/
+    .vision h1{font-size: 25px;}
+    .blurb{font-size: 11.5px;}
+    .myBtn{display: none;}
+    .more{display: contents;}
+    /*Sustainable Caterers*/
+    .sustainableMain{grid-template-columns: 1fr 1fr; grid-template-rows: auto; gap: 25px; grid-template-areas: "plant compost" "workwear shop" "give plastic"; margin-left: 15px; margin-right: 15px;} 
+    .textbox{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "textbox" "button";}
+     /* downloads */
+     .downloadMain{grid-template-columns: repeat(2, 1fr); grid-template-areas: "menus orders" "party party";}
+    /*Contact*/
+    /*Footer*/
+    .footer{grid-template-rows: auto;}
+    .footer p{font-size: 14px;}
+}
+
+/*Small desktop*/
+@media (max-width:800px){
+    /*Menu*/
+    [aria-controls="menu-list"] {display: block; grid-area: menu-list;}
+    .menu{perspective: 800px;}
+    .menu ul{max-height: 0; overflow: hidden; transform: rotateX(90deg); transition: all 0.5s;}
+    [aria-expanded="true"] ~ ul{display:grid; max-height: 500px; transform: rotateX(0);}
+    [aria-expanded="false"] .close {display:none;}
+    [aria-expanded="true"] .close{display: inline-block;}
+    [aria-expanded="true"] .open{display: none;}
+    /*Home Page*/
+    .hero, .heroSC{grid-template-rows: 525px;}
+    .hero img{width: 550px;}
+    .heroImage, .heroImageSC{height: 525px;}
+    .vision h1 {font-size: 25px; padding: 6px; letter-spacing:none; gap: 2px;}
+    .mission{grid-template-columns: 1fr; grid-template-rows: 350px 275px; grid-template-areas: "roots" "blurb";}
+    .roots{margin: auto;}
+    .blurb{font-size: 11.5px;}
+    .dots{display: contents;}
+    .myBtn{display: block;}
+    .more{display: none;}
+    .bullets {grid-template-columns: 1fr 1fr; grid-template-rows:auto; gap: 15px; grid-template-areas: "plant wls" "inclusive sustainable"} 
+    .bullets h1{font-size: 24px; padding: 5px 15px 15px 15px;}
+    .bullets p{font-size: 16px; padding: 0 15px 0 15px;}
+    /*Sustainable Caterers*/
+    .blurbSC{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "image" "p"; gap: 15px;}
+    .blurbSC img{margin: auto;}
+    .T h2{font-size: 25px; padding: 6px; letter-spacing:none; gap: 2px;}
+    .sustainableMain{grid-template-columns: 1fr 1fr; grid-template-rows: auto; gap: 25px; grid-template-areas: "plant compost" "workwear shop" "give plastic"} 
+    .sustainableMain h1{font-size: 24px;}
+    .sustainableMain p{font-size: 16px; margin: 10px;}
+    .textbox{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "textbox" "button";}
+     /* downloads */
+     .downloadMain{grid-template-columns: repeat(2, 1fr); grid-template-areas: "menus orders" "party party";}
+    /*Contact*/
+    .container{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "phone" "form";}
+    /*Form Styles*/
+    .contact form{padding-left: 0;}
+    /*Footer*/
+    .footer {grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; grid-template-areas: "foot foot foot" "footer2 footer1 footer3" "footer2a footer1a footer3a"; gap: 10px;}
+    .footer img{width: 90px; height: 90px;}
+    .footer1 img{width: 200px;}
+    .footer p{font-size: 12px;}
+    .footer1, .footer2, .footer3{justify-self: center;}
+    .footer4{grid-template-columns: 0.4fr 0.35fr 1fr; grid-template-rows: 70px 40px;}
+    .docs{margin-right:10px;}
+    .copy{margin-left:10px;}
+    .info{margin-right:10px;}
+}
+
+/*Tablet*/
+@media (max-width:600px){
+    /*Menu*/
+    [aria-controls="menu-list"] {display: block; grid-area: menu-list;}
+    .menu{perspective: 800px;}
+    .menu ul{max-height: 0; overflow: hidden; transform: rotateX(90deg); transition: all 0.5s;}
+    [aria-expanded="true"] ~ ul{display:grid; max-height: 500px; transform: rotateX(0);}
+    [aria-expanded="false"] .close {display:none;}
+    [aria-expanded="true"] .close{display: inline-block;}
+    [aria-expanded="true"] .open{display: none;}
+    /*Home Page*/
+    .hero, .heroSC{grid-template-rows: 475px;}
+    .hero img{width: 350px;}
+    .heroImage, .heroImageSC{height: 475px;}
+    .vision h1 {font-size: 15px; padding: 4px; letter-spacing:none; gap: 2px;}
+    .mission{grid-template-columns: 1fr; grid-template-rows: 290px 400px; grid-template-areas: "roots" "blurb"; gap: 10px;}
+    .roots{width: 350px; height: 270px; margin: auto; padding-left: 20px;}
+    .blurb{font-size: 11.5px;}
+    .dots{display: contents;}
+    .myBtn{display: block; margin: 0 auto;}
+    .more{display: none;}
+    .bullets {grid-template-columns: 1fr; grid-template-rows:auto; gap: 15px; grid-template-areas: "plant" "wls" "inclusive" "sustainable"} 
+    .bullets h1{font-size: 24px; padding: 5px 15px 15px 15px;}
+    .bullets p{font-size: 16px; padding: 0 15px 0 15px;}
+    .bulletBtn {height: 60px; width: 150px; font-size: 16px;}
+    .bulletBtn:hover{border: #000 1.25px solid;}
+    .wls p{padding-bottom: 2px;}
+    .inclusive p{padding-bottom: 2px;}
+    .supply p{padding-top: 2px; padding-top: 2px;}
+    .plant p{padding-bottom: 2px;}
+    /*Sustainable Caterers*/
+    .heroSC h1{font-size: 28px; padding:15px;}
+    .blurbSC{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "image" "p"; gap: 15px;}
+    .blurbSC img{margin: auto;}
+    .blurbPSC{font-size: 13px;}
+    .T h2{font-size: 15px; padding: 4px; letter-spacing:none; gap: 2px;}
+    .sustainableMain{grid-template-columns: 1fr; grid-template-rows: auto; gap: 15px; grid-template-areas:"plant" "compost" "workwear" "shop" "give" "plastic"} 
+    .sustainableMain h1{font-size: 24px;}
+    .sustainableMain p{font-size: 16px; margin: auto;}
+    .textbox{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "textbox" "button";}
+    /* downloads */
+    .downloadMain{grid-template-columns: 1fr; grid-template-areas: "menus" "orders" "party";}
+    .downloadMainTwo{grid-template-columns: 1fr; margin-top: 2em; grid-template-areas: "romantic" "wedding";}
+    /*Contact*/
+    .heroC h1{font-size: 26px;}
+    .container{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "phone" "form";}
+    .heading h1{font-size: 28px;}
+    .companyInfo ul{font-size: 16px;}
+    /*Form Styles*/
+    .contact form{padding-left: 0; gap: 10px;}
+    .contact label{font-size: 18px; font-weight: 800;}
+    .contact input, textarea{height: 30px; width: 325px; font: 100 16px 'dual';}
+    .contact textarea{height:95px; width: 325px;}
+    /*Footer*/
+    .footer {grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 100px); grid-template-areas: "foot foot" "footer1 footer1a" "footer2 footer2a" "footer3 footer3a"; gap: 5px;}
+    .foot{font-size: 12px;}
+    .footer img{width: 90px; height: 90px;}
+    .footer1 img{width: 150px;}
+    .footer p {display: none;}
+    div .footer1a{display:flex; justify-content: center; align-items: center;}
+    div .footer2a{display:flex; justify-content: center; align-items: center;}
+    div .footer3a{display:flex; justify-content: center; align-items: center;}
+    .footer4{grid-template-columns: 0.3fr 0.5fr 1fr; grid-template-rows: 70px 40px; grid-template-areas: "mark media docs" "copy copy info"; gap: 5px;}
+    .mark{margin-left: 5px; padding: 0;}
+    .docs{margin:5px 5px 0 0; padding: 0;}
+    .copy{margin:0 0 0 5px;}
+    .info{margin: 0 5px 0 0; }
+}
+
+/*mobile*/
+@media (max-width:375px){
+    button{height: 40px; width: 100px; font-size: 12px;}
+    button:hover{border: #000 0.5px solid; cursor: pointer;}
+    /*Menu*/
+    [aria-controls="menu-list"] {display: block; grid-area: menu-list;}
+    .menu{perspective: 800px;}
+    .menu ul{max-height: 0; overflow: hidden; transform: rotateX(90deg); transition: all 0.5s;}
+    [aria-expanded="true"] ~ ul{display:grid; max-height: 500px; transform: rotateX(0);}
+    [aria-expanded="false"] .close {display:none;}
+    [aria-expanded="true"] .close{display: inline-block;}
+    [aria-expanded="true"] .open{display: none;}
+    /*Home Page*/
+    .hero, .heroSC{grid-template-rows: 400px;}
+    .hero img{width: 250px;}
+    .heroImage, .heroImageSC{height: 400px;}
+    .vision h1 {font-size: 10px; padding: 2px; letter-spacing:none; gap: 2px;}
+    .mission{grid-template-columns: 1fr; grid-template-rows: 260px 400px; grid-template-areas: "roots" "blurb"; gap: 5px;}
+    .roots{width: 300px; height: 250px; margin: auto; padding-left: 20px;}
+    .blurb{font-size: 11.5px;}
+    .actions h1{font-size: 26px; letter-spacing: none; gap: 2px; padding: 5px;}
+    .myBtn{display: block; font-size: 12px; height: 16px; margin: 0 auto;}
+    .more{display: none;}
+    .bullets {grid-template-columns: 1fr; grid-template-rows:auto; gap: 15px; grid-template-areas:"plant" "wls" "inclusive" "sustainable" } 
+    .bullets h1{ letter-spacing: 3px; font-size: 14px; word-spacing: 5px;}
+    .bullets p{font-size: 12px; letter-spacing: 0.5px;}
+    .bullets img{ width: 270px; height: 150px;}
+    .bulletBtn {height: 40px; width: 100px; font-size: 12px; margin-bottom: 15px;}
+    .bulletBtn:hover{border: #000 0.5px solid;}
+    .wls p{padding-bottom: 2px;}
+    .inclusive p{padding-bottom: 2px;}
+    .supply p{padding-top: 2px; padding-top: 2px;}
+    .plant p{padding-bottom: 2px;}
+    /*Sustainable Caterers*/
+    .heroSC h1{font-size:22px; padding:15px;}
+    .blurbSC{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "image" "p"; gap: 15px;}
+    .blurbSC img{width: 300px; height: 250px; margin: auto; padding-left: 20px;}
+    .blurbPSC{font-size: 11.5px;}
+    .sustainableMain{grid-template-columns: 1fr; grid-template-rows: auto; gap: 15px; grid-template-areas: "plant" "compost" "workwear" "shop" "give" "plastic"} 
+    .T h2 {font-size: 13px; padding: 2px; letter-spacing:none; gap: 2px;}
+    .sustainableMain h1{ letter-spacing: 0.5px; font-size: 14px; letter-spacing: 3px;}
+    .sustainableMain p{font-size: 12px; letter-spacing: 0.5px; margin: 10px;}
+    .sustainableMain img{ width: 270px; height: 150px;}
+    .textbox{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "textbox" "button";}
+    .textboxP{font-size: 14px;}
+    /* download */
+    .heroD h1{padding: 30px}
+    .downloadMain{grid-template-columns: 1fr; grid-template-areas: "menus" "orders" "party";}
+    .downloadMainTwo{grid-template-columns: 1fr; margin-top: 2em; grid-template-areas: "romantic" "wedding";}
+    /*Contact*/
+    .heroC h1{font-size: 20px;}
+    .container{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "phone" "form";}
+    .heading h1{font-size: 20px;}
+    .companyInfo ul{font-size: 14px;}
+    /*Form Styles*/
+    .contact form{padding-left: 0; gap: 10px;}
+    .contact label{font-size: 16px; font-weight: 700;}
+    .contact input, textarea{height: 25px; width: 300px; font: 100 14px 'dual';}
+    .contact textarea{height:80px; width: 300px;}
+    /*Footer*/
+    .footer {grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 100px); grid-template-areas: "foot foot" "footer1 footer1a" "footer2 footer2a" "footer3 footer3a"; gap: 5px;}
+    .foot{font-size: 12px;}
+    .footer img{width: 90px; height: 90px;}
+    .footer1 img{width: 130px;}
+    div .footer1a{display:flex; justify-content: center; align-items: center;}
+    div .footer2a{display:flex; justify-content: center; align-items: center;}
+    div .footer3a{display:flex; justify-content: center; align-items: center;}
+    .footer p {display: none;}
+    .footer4{grid-template-columns: 1fr 0.25fr; grid-template-rows: 75px repeat(3, 30px); grid-template-areas: "mark media" "docs ." "copy ." "info ."; font-size: 8px;}
+    .mark{margin-left: 5px; padding: 0;}
+    /* .media{display: none;} */
+    .docs{margin:0 0 0 5px; padding: 0; text-align: left; justify-self: left;}
+    .copy{margin:0 0 0 5px;}
+    .info{margin: 0 0 0 5px; text-align: left;}
+}
