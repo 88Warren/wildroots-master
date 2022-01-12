@@ -545,12 +545,12 @@ a:hover{
 
 .sustainableMain{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     gap: 20px;
     grid-template-areas: 
-    "plant compost workwear"
-    "shop give plastic";
+    "plant plant compost compost workwear workwear"
+    ". shop shop plastic plastic .";
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -645,9 +645,9 @@ a:hover{
     grid-area: plastic;
 }
 
-.give{
+/* .give{
     grid-area: give;
-}
+} */
 
 .textbox{
     display: grid;
@@ -1443,11 +1443,13 @@ a:hover{
     /*Form Styles*/
     .contact form{padding-left: 0;}
     /*Footer*/
-    .footer {grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; grid-template-areas: "foot foot foot" "footer2 footer1 footer3" "footer2a footer1a footer3a"; gap: 10px;}
-    .footer img{width: 90px; height: 90px;}
-    .footer1 img{width: 200px;}
-    .footer p{font-size: 12px;}
-    .footer1, .footer2, .footer3{justify-self: center;}
+    .clients{grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        ". external external external external ." 
+        "footer2 footer2 footer1 footer1 footer3 footer3"
+        "footer2a footer2a footer1a footer1a footer3a footer3a"
+        ". footer5 footer5 footer6 footer6 ."
+        ". footer5a footer5a footer6a footer6a .";}
     .footer4{grid-template-columns: 0.4fr 0.35fr 1fr; grid-template-rows: 70px 40px;}
     .docs{margin-right:10px;}
     .copy{margin-left:10px;}
@@ -1508,14 +1510,17 @@ a:hover{
     .contact input, textarea{height: 30px; width: 325px; font: 100 16px 'dual';}
     .contact textarea{height:95px; width: 325px;}
     /*Footer*/
-    .footer {grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 100px); grid-template-areas: "foot foot" "footer1 footer1a" "footer2 footer2a" "footer3 footer3a"; gap: 5px;}
-    .foot{font-size: 12px;}
-    .footer img{width: 90px; height: 90px;}
+    .preFoot h1{font-size: 24px;}
+    .preFooter{grid-template-columns: 1fr; grid-template-areas: "wales" "llamau";}
+    .preFooter1, .preFooter1a{padding: 0 1em;}
+    .clients{grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "external external" "footer1 footer1a" "footer2 footer2a"
+        "footer3 footer3a" "footer5 footer5a" "footer6 footer6a";
+        padding-bottom: 1em;}
+    .externalClients{letter-spacing: 1px;}
     .footer1 img{width: 150px;}
-    .footer p {display: none;}
-    div .footer1a{display:flex; justify-content: center; align-items: center;}
-    div .footer2a{display:flex; justify-content: center; align-items: center;}
-    div .footer3a{display:flex; justify-content: center; align-items: center;}
+    div .footer1a, div .footer2a, div .footer3a, div .footer4a, div .footer5a, div .footer6a{display:flex; justify-content: center; align-items: center;}
     .footer4{grid-template-columns: 0.3fr 0.5fr 1fr; grid-template-rows: 70px 40px; grid-template-areas: "mark media docs" "copy copy info"; gap: 5px;}
     .mark{margin-left: 5px; padding: 0;}
     .docs{margin:5px 5px 0 0; padding: 0;}
@@ -1583,14 +1588,15 @@ a:hover{
     .contact input, textarea{height: 25px; width: 300px; font: 100 14px 'dual';}
     .contact textarea{height:80px; width: 300px;}
     /*Footer*/
-    .footer {grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 100px); grid-template-areas: "foot foot" "footer1 footer1a" "footer2 footer2a" "footer3 footer3a"; gap: 5px;}
-    .foot{font-size: 12px;}
-    .footer img{width: 90px; height: 90px;}
-    .footer1 img{width: 130px;}
-    div .footer1a{display:flex; justify-content: center; align-items: center;}
-    div .footer2a{display:flex; justify-content: center; align-items: center;}
-    div .footer3a{display:flex; justify-content: center; align-items: center;}
-    .footer p {display: none;}
+    .preFoot h1{letter-spacing: 1px; font-size: 18px;}
+    .preFoot h1:before, .preFoot h1:after{height: 6px;}
+    .clients{grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "external external" "footer1 footer1a" "footer2 footer2a"
+        "footer3 footer3a" "footer5 footer5a" "footer6 footer6a";
+        padding-bottom: 1em;}
+    .externalClients{letter-spacing: 1px;}
+    .clients img{width: 130px;}
     .footer4{grid-template-columns: 1fr 0.25fr; grid-template-rows: 75px repeat(3, 30px); grid-template-areas: "mark media" "docs ." "copy ." "info ."; font-size: 8px;}
     .mark{margin-left: 5px; padding: 0;}
     /* .media{display: none;} */
