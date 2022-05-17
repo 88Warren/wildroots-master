@@ -2,7 +2,7 @@
 .blogCard{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5em;
+    gap: 0.5em;
     grid-template-areas: "one two";
 }
 
