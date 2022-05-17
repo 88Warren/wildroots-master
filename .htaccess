@@ -3,4 +3,6 @@ RewriteEngine on
 #Rewrite for downloads.html
 RewriteRule ^downloads downloads.html [NC,L]
 RewriteRule ^sustainability sustainability.html [NC,L]
+RewriteRule ^blog blog.html [NC,L]
+RewriteRule ^show show.html [NC,L]
 RewriteRule ^contact contact.php [NC,L]

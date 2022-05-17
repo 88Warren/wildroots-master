@@ -116,52 +116,59 @@ $firstname = $lastname = $email = $phone = $subject = $event = $message = $succe
 
 
 <!DOCTYPE html>
-<html   lang="en">
+
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="creative bespoke sustainable fresh local business" />
         <meta name="keywords" content="wedding, venue, caterer, welsh, in-house" />
         <meta http-equiv="author" content="LMW" />
-            <link href="main.css" rel="stylesheet" type="text/css" />
-            <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-            <title>Get in touch | Wild Roots</title>
+        <link rel="stylesheet" href="/stylesheets/nav.css" />
+        <link rel="stylesheet" href="/stylesheets/main.css"/>
+        <link rel="stylesheet" href="/stylesheets/blog.css"/>
+        <link rel="stylesheet" href="/stylesheets/footer.css"/>
+        <title>Wildroots Kitchen & Bar</title>
     </head>
-<body>
-<nav class="top transparent" id="navbarPrime">
-        <a href="/"><img src="Images/Logo/main logo.jpg" alt="Logo Wild Roots" width="120" height="50" /></a>
-                <div class="menu">
-                    <button aria-expanded="false" aria-controls="menu-list">
-                        <span class="open">☰</span>
-                        <span class="close">×</span>
-                    </button>
-                    <ul class="menu-list">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/#whatWeDo">What we do</a></li>
-                    <li><a href="sustainability">Sustainability</a></li>
-                    <!-- <li><a href="shop.html">Shop</a></li> -->
-                    <li><a href="downloads">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="social">
-                    <a href="https://www.instagram.com/wildrootskitchenandbar/?hl=en"  target="_blank"><img class="instagram" src="Images/Logo/instagram.png" width="25"></a> 
-                    <a href="https://www.facebook.com/pages/category/Caterer/Wild-Roots-Kitchen-and-Bar-100997658454964/"  target="_blank"><img class="facebook" src="Images/Logo/facebook.png" width="21"></a> 
-                    <a href="https://www.linkedin.com/company/wild-roots-kitchen-and-bar-ltd"  target="_blank"><img class="linkedin" src="Images/Logo/linkedin.png" width="25"></a>
-                    <a href="https://twitter.com/WildRoots_KB"  target="_blank"><img class="twitter" src="Images/Logo/twitter.png" width="25"></a>
-                </div>
-            </nav>
+        <body>
+            <nav class="top transparent" id="navbarPrime">
+                <a href="/"><img src="Images/nav/main logo.jpg" alt="Logo Wild Roots" width="120" height="50" /></a>
+                    <div class="menu">
+                        <button aria-expanded="false" aria-controls="menu-list">
+                            <span class="open">☰</span>
+                            <span class="close">×</span>
+                        </button>
+                        <ul class="menu-list">
+                            <li><a href="/#whatWeDo">What we do</a></li>
+                            <li><a href="/sustainability">Sustainability</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/contact">Get in Touch</a></li>
+                        </ul>
+                    </div>
+                        <div class="social">
+                            <a href="https://www.instagram.com/wildrootskitchenandbar/?hl=en"  target="_blank"><img class="instagram" src="Images/nav/instagram.png" width="25"></a> 
+                            <a href="https://www.facebook.com/pages/category/Caterer/Wild-Roots-Kitchen-and-Bar-100997658454964/"  target="_blank"><img class="facebook" src="Images/nav/facebook.png" width="21"></a> 
+                            <a href="https://www.linkedin.com/company/wild-roots-kitchen-and-bar-ltd"  target="_blank"><img class="linkedin" src="Images/nav/linkedin.png" width="25"></a>
+                            <a href="https://twitter.com/WildRoots_KB"  target="_blank"><img class="twitter" src="Images/nav/twitter.png" width="25"></a>
+                        </div>
+                    </nav>
 
     <div class="heroC">
         <div class="heroImageC"><h1>Contact Wild Roots</h1></div>
     </div>
 
-    <div class="container">
+    <div class="getInTouch">
             <div class="companyInfo">
                 <h1 class="heading">Get in touch </h1>
                 <ul>
-                    <li><span>Call</span> 0330 128 1591</li>
                     <li><span>Email</span> theteam@wildrootskitchenandbar.co.uk</li>
                 </ul>
+                <h1 class="heading">Sign up to our newsletter</h1>
+                <form action="https://eepurl.com/hpBXjj" target="_blank">
+                    <center><button class="bulletBtn newsletter">Click here</button></center>
+                </form>
+                
             </div>
             <div class="contact">
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form">
@@ -217,32 +224,32 @@ $firstname = $lastname = $email = $phone = $subject = $event = $message = $succe
         </div>
 
         <div id="footer4">
-                <div id="mark">
-                    <a href="/"><img src="Images/Logo/main logo.jpg" alt="Logo Wild Roots" width="120" height="50" /></a> 
-                </div>
-                <div id="media">
-                    <a href="https://www.instagram.com/wildrootskitchenandbar/?hl=en"  target="_blank"><img id="instafoot" src="Images/Logo/instagram.png" width="25"></a> 
-                    <a href="https://www.facebook.com/pages/category/Caterer/Wild-Roots-Kitchen-and-Bar-100997658454964/"  target="_blank"><img id="facefoot" src="images/Logo/facebook.png" width="21"></a>
-                    <a href="https://www.linkedin.com/company/wild-roots-kitchen-and-bar-ltd"  target="_blank"><img id="linkedin" src="Images/Logo/linkedin.png" width="25"></a>
-                    <a href="https://twitter.com/WildRoots_KB"  target="_blank"><img id="twitter" src="Images/Logo/twitter.png" width="25"></a>
-                </div>
-                <div id="docs">
-                    <a href="docs/EnvironmentalPolicies.pdf"  target="_blank">Environmental Policies |</a>
-                    <a href="docs/Website Policies.pdf"  target="_blank">Website Policies |</a>
-                    <a href="docs/missionStatement.pdf"  target="_blank">Mission Statement</a>
-                </div>
-                <div id="weddingLinks"> 
-                    <a href="https://www.ukbridaldirectory.co.uk/" target="_blank">UK Bridal Directory |</a>
-                    <a href="https://www.findaweddingsupplier.co.uk/" target="_blank">Find A Wedding Supplier |</a>
-                    <a href="https://www.thesustainableweddingmovement.co.uk/" target="_blank">The Sustainable Wedding Movement</a>
-                </div>
-                <div id="copy">
-                    <p>© Copyright 2020 Wild Roots Kitchen and Bar Ltd.</p>
-                </div>
-                <div id="info">
-                    <p>Registered in England & Wales | Company no. 12808915 | Registered Address: Bridgend</p>
-                </div>
+            <div id="mark">
+                <a href="/"><img src="Images/nav/main logo.jpg" alt="Logo Wild Roots" width="120" height="50" /></a> 
+            </div>
+            <div id="media">
+                <a href="https://www.instagram.com/wildrootskitchenandbar/?hl=en"  target="_blank"><img id="instafoot" src="Images/nav/instagram.png" width="25"></a> 
+                <a href="https://www.facebook.com/pages/category/Caterer/Wild-Roots-Kitchen-and-Bar-100997658454964/"  target="_blank"><img id="facefoot" src="images/nav/facebook.png" width="21"></a>
+                <a href="https://www.linkedin.com/company/wild-roots-kitchen-and-bar-ltd"  target="_blank"><img id="linkedin" src="Images/nav/linkedin.png" width="25"></a>
+                <a href="https://twitter.com/WildRoots_KB"  target="_blank"><img id="twitter" src="Images/nav/twitter.png" width="25"></a>
+            </div>
+            <div id="docs">
+                <a href="docs/footer/EnvironmentalPolicies.pdf"  target="_blank">Environmental Policies |</a>
+                <a href="docs/footer/Website Policies.pdf" target="_blank">Website Policies |</a>
+                <a href="docs/footer/missionStatement.pdf" target="_blank">Mission Statement</a>
+            </div>
+            <div id="weddingLinks"> 
+                <a href="https://www.ukbridaldirectory.co.uk/" target="_blank">UK Bridal Directory |</a>
+                <a href="https://www.findaweddingsupplier.co.uk/" target="_blank">Find A Wedding Supplier |</a>
+                <a href="https://www.thesustainableweddingmovement.co.uk/" target="_blank">The Sustainable Wedding Movement</a>
+            </div>
+            <div id="copy">
+                <p>© Copyright 2022 Wild Roots Kitchen and Bar Ltd.</p>
+            </div>
+            <div id="info">
+                <p>Registered in England & Wales | Company no. 12808915 | Registered Address: Bridgend</p>
+            </div>
         </div>
-            <script src="wildroots.js" ></script>
-</body>
+        <script src="/javascript/wildroots.js" ></script>
+    </body>
 </html>

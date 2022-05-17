@@ -1,0 +1,108 @@
+nav{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 65px;
+    grid-template-areas: "logo list social";
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+}
+
+nav.transparent{
+    background-color: #000000;
+    transition: 1s;
+}
+
+nav.colored{
+    background-color: #000;
+    opacity: 0.6;
+    transition: 1s;
+}
+
+.logo a{
+    grid-area: logo;
+    font-size: x-large;
+}
+
+.logo a :hover{
+    padding: 2px;
+    border: #cb5827 2px solid;
+}
+
+.menu button{
+    height: 40px;
+    width: 100px;
+    font-family: 'amsterdam', Fallback,  brush script MT;
+    font-size: 14px;
+    background:#cb5728;
+    border: none;
+    border-radius: 20px;
+    font-weight: normal;
+}
+
+.menu li{
+    float: left;
+}
+
+.menu a{
+    grid-area: list;
+    align-self: center;
+    justify-items: center;
+    /* font-size: large; */
+    font-family: 'dual', Fallback, sans-serif;
+    padding: 0 1em;
+    color: white;
+    font-style: normal;
+}
+
+a:hover{
+    color: #cb5827;
+}
+
+.social{
+    grid-area: social;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center
+}
+
+.social img{
+    border: #000 2px solid;
+    border: hidden;    
+}
+
+.social img:hover{
+    border: #cb5827 2px solid;
+}
+
+.instagram{
+    margin-right: 10px;
+}
+
+.facebook{
+    padding-bottom: 3px;
+    margin-right: 10px;
+}
+
+.linkedin{
+    margin-right: 10px;
+}
+
+[aria-controls="menu-list"] {
+    display: none;
+}
+
+/*Medium Desktop*/
+@media (max-width:1000px){
+    /*Menu*/
+    [aria-controls="menu-list"] {display: block; grid-area: menu-list;}
+    .menu{perspective: 800px;}
+    .menu ul{max-height: 0; overflow: hidden; transform: rotateX(90deg); transition: all 0.5s;}
+    [aria-expanded="true"] ~ ul{display:grid; max-height: 500px; transform: rotateX(0);}
+    [aria-expanded="false"] .close{display:none;}
+    [aria-expanded="true"] .close{display: inline-block;}
+    [aria-expanded="true"] .open{display: none;}
+}
