@@ -31,7 +31,7 @@
     font-style: normal;
 }
 
-.container{
+.holder{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -68,7 +68,7 @@
 
 .card__body h4{
     font-weight: 900;
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .blogMore:hover{
@@ -137,3 +137,32 @@
     margin: 2em;
 }
 
+/*all desktops*/
+@media (min-width: 1200px){
+   
+}
+
+/*bigger desktop*/
+@media (max-width:1200px){
+    
+}
+
+/*Medium Desktop*/
+@media (max-width:1000px){
+    
+}
+
+/*Small desktop*/
+@media (max-width:800px){
+    section.blogCard {grid-template-columns: 1fr; grid-template-areas: "one" "two";}
+}
+
+/*Tablet*/
+@media (max-width:600px){
+  
+}
+
+/*mobile*/
+@media (max-width:375px){
+   
+}
