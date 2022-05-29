@@ -128,7 +128,7 @@
     grid-template-rows: 4.5em;
     grid-template-areas: "mark media docs" ". . weddings" "copy copy info";
     /* gap: 1em; */
-    font-size: 1em;
+    font-size: 0.85em;
     color: #fff;
     font-family: 'dual', Fallback, sans-serif;
     background-color: #000;
@@ -208,6 +208,18 @@
     margin: 1em;
 }
 
+/*Medium Desktop*/
+@media (max-width:1000px){
+    #footer4{grid-template-columns: 1fr 1fr; grid-template-rows: auto; grid-template-areas: "mark media" "docs docs" "weddings weddings" "copy copy" "info info";}
+    #mark{display: grid; justify-items:center; align-items:center; margin: 0;}
+    #mark a{padding: 0.25em;}
+    #media a{padding: 0.25em;}
+    #docs{padding: 0; margin: 0; text-align: center; justify-self: center;}
+    #weddingLinks{margin: 0.5em; text-align: center; padding: 0;}
+    #copy{margin: 0.5em; text-align: center;}
+    #info{margin: 0.5em; text-align: center;}
+}
+
 /*Small desktop*/
 @media (max-width:800px){
     .clients{grid-template-columns: repeat(6, 1fr);
@@ -217,10 +229,7 @@
         "footer2a footer2a footer1a footer1a footer3a footer3a"
         ". footer5 footer5 footer6 footer6 ."
         ". footer5a footer5a footer6a footer6a .";}
-    .footer4{grid-template-columns: 0.4fr 0.35fr 1fr; grid-template-rows: 70px 40px;}
-    .docs{margin-right:10px;}
-    .copy{margin-left:10px;}
-    .info{margin-right:10px;}
+    #footer4{font-size: 0.75em;}
 }
 
 /*Tablet*/
@@ -236,19 +245,11 @@
     .externalClients{letter-spacing: 1px;}
     .footer1 img{width: 150px;}
     div .footer1a, div .footer2a, div .footer3a, div .footer4a, div .footer5a, div .footer6a{display:flex; justify-content: center; align-items: center;}
-    .footer4{grid-template-columns: 0.3fr 0.5fr 1fr; grid-template-areas: "mark media docs" "copy copy info"; gap: 5px;}
-    .mark{margin-left: 5px; padding: 0;}
-    .docs{margin:5px 5px 0 0; padding: 0;}
-    .copy{margin:0 0 0 5px;}
-    .info{margin: 0 5px 0 0; }
+    #footer4{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "mark" "media" "docs" "weddings" "copy" "info"; font-size: 0.5em;}
 }
 
 /*mobile*/
 @media (max-width:375px){
     .preFoot h1{letter-spacing: 1px; font-size: 18px;}
     .preFoot h1:before, .preFoot h1:after{height: 6px;}
-    /* .clients img{width: 130px;} */
-    .footer4{grid-template-columns: 1fr 0.25fr; grid-template-rows: 75px repeat(3, 30px); grid-template-areas: "mark media" "docs ." "copy ." "info ."; font-size: 8px;}
-    .docs{margin:0 0 0 5px; padding: 0; text-align: left; justify-self: left;}
-    .info{margin: 0 0 0 5px; text-align: left;}
 }

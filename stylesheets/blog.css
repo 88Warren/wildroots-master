@@ -2,6 +2,7 @@
 .blogCard{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     gap: 0.5em;
     grid-template-areas: "one two" "three four";
 }
@@ -159,7 +160,7 @@
 }
 
 /*all desktops*/
-@media (min-width: 1200px){
+@media (max-width: 1200px){
     section.blogCard {grid-template-columns: 1fr; grid-template-areas: "one" "two" "three" "four";}
 }
 

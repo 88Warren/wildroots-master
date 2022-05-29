@@ -210,7 +210,7 @@ a:hover{
 .banner{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 200px;
+    grid-template-rows: auto;
     grid-template-areas: "banner";
     background-image: url("../Images/index/afternoon-tea-88.jpg");
     background-size: cover;
@@ -232,58 +232,32 @@ a:hover{
 .brag{
     color:#fff;
     font-family: 'dual', Fallback, sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     line-height: 1.6;
+    text-align: center;
+    margin: 1em;
 }
 
 .WWD{
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
-    gap: 20px;
+    gap: 2em;
     margin-bottom: 2em;
     grid-template-areas: 
-    ". plant plant . wls wls . "
-    ". . . guide .  . .";
+    ". plant . wls . "
+    ". . guide . .";
 }
 
 .wls{
-    grid-area: inclusive;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.wls p{
-    padding-bottom: 16px;
-}
-
-.inclusive{
-    grid-area: sustainable;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 15px;
-}
-
-.inclusive p{
-    padding-bottom: 10px;
-}
-
-.supply button{
-    margin-bottom: 30px;
-}
-
-.supply{
     grid-area: wls;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.supply p{
-    padding-top: 30px;
-    padding-bottom: 4px;
+.wls p{
+    padding-bottom: 1em;
 }
 
 .plant{
@@ -294,11 +268,7 @@ a:hover{
 }
 
 .plant p{
-    padding-bottom: 10px;
-}
-
-.plant button{
-    margin-bottom: 20px;
+    padding-bottom: 1em;
 }
 
 .testimonial{
@@ -316,7 +286,7 @@ a:hover{
     text-align: center;
     font-size: 1.5em;
     font-weight: 900;
-    padding-bottom: 1em;
+    margin: 1.5em;
 }
 
 .niftyGuide button{
@@ -956,7 +926,7 @@ button.newsletter{
    /*Home Page*/
    .mission{grid-template-columns: 1fr; grid-template-rows: 350px 275px; grid-template-areas: "roots" "blurb";}
    .roots{margin: auto;}
-   .WWD{grid-template-columns: 1fr 1fr; grid-template-rows:auto; gap: 15px; grid-template-areas: "plant wls" "inclusive sustainable"} 
+   .WWD{grid-template-columns: 1fr 1fr; grid-template-rows:auto; gap: 15px; grid-template-areas: "plant wls" "guide guide"} 
    .dots{display: contents;}
    .myBtn{display: block;}
    .more{display: none;}
@@ -988,9 +958,9 @@ button.newsletter{
       .roots{width: 350px; height: 270px; padding-left: 20px;}
       .blurb{font-size: 11.5px;}
       .myBtn{margin: 0 auto;}
-      .WWD {grid-template-columns: 1fr; grid-template-areas: "plant" "wls" "inclusive" "sustainable"} 
-      .wls p, .inclusive p, .plant p{padding-bottom: 2px;}
-      .supply p{padding-top: 2px;}
+      .WWD {grid-template-columns: 1fr; grid-template-areas: "plant" "wls" "guide"} 
+      .wls p, .plant p{padding-bottom: 2px;}
+      .niftyGuide button{width: 13em;}
       /*Sustainable Caterers*/
       .blurbSC{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "image" "p"; gap: 15px;}
       .blurbPSC{font-size: 13px;}
@@ -1030,6 +1000,7 @@ button.newsletter{
      .roots{width: 300px; height: 250px;}
      .actions h1{font-size: 26px; letter-spacing: none; gap: 2px; padding: 5px;}
      .myBtn{font-size: 12px; height: 16px;}
+     .niftyGuide button{width: 13em;}
       /*Sustainable Caterers*/
       .blurbSC img{width: 300px; height: 250px; margin: auto; padding-left: 20px;}
       .blurbPSC{font-size: 11.5px;}

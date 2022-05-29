@@ -106,3 +106,8 @@ a:hover{
     [aria-expanded="true"] .close{display: inline-block;}
     [aria-expanded="true"] .open{display: none;}
 }
+
+@media (max-width:490px){
+    nav{display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "logo list";}
+    .social{display: none;}
+}
