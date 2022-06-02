@@ -161,7 +161,7 @@
 
 /*all desktops*/
 @media (max-width: 1200px){
-    section.blogCard {grid-template-columns: 1fr; grid-template-areas: "one" "two" "three" "four";}
+    section.blogCard {grid-template-columns: 1fr; grid-template-areas: "four" "three" "two" "one";}
 }
 
 /*bigger desktop*/
