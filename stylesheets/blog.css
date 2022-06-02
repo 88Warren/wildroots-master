@@ -4,7 +4,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 0.5em;
-    grid-template-areas: "one two" "three four";
+    grid-template-areas: "four three" "two one";
 }
 
 .cardBody{
