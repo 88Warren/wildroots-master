@@ -4,7 +4,4 @@ RewriteEngine on
 RewriteRule ^downloads downloads.html [NC,L]
 RewriteRule ^sustainability sustainability.html [NC,L]
 RewriteRule ^blog blog.html [NC,L]
-RewriteRule ^How we became an eco-friendly corporate caterer in South Wales How we became an eco-friendly corporate caterer in South Wales.html [NC,L]
-RewriteRule ^5 top tips to plan your wedding day blogThree.html [NC,L]
-RewriteRule ^carbonFootprint carbonFootprint.html [NC,L]
 RewriteRule ^contact contact.php [NC,L]

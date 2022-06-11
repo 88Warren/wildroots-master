@@ -15,21 +15,10 @@
     align-items: flex-start;
 }
 
-.cardOne{
-    grid-area: one;
-}
-
-.cardTwo{
-    grid-area: two;
-}
-
-.cardThree{
-    grid-area: three;
-}
-
-.cardFour{
-    grid-area: four;
-}
+.cardOne{grid-area: one;}
+.cardTwo{grid-area: two;}
+.cardThree{grid-area: three;}
+.cardFour{grid-area: four;}
 
 .cardBody p{
     font-weight: 300;
@@ -40,24 +29,30 @@
     font-style: normal;
 }
 
-.holder{
+/* .holder{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 10em;
     gap: 2em;
-}
+} */
 
-.card_header img{
+.card__image{
+    width: 30em;
+    height: 22em;
+    border-radius: 0.5em 0.5em 0 0;
+}
+/* .card_header img{
     max-width: 100%;
     display: block;
     object-fit: cover;
-}
+} */
 
 .card{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: hidden; */
+    width: 30em;
     box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 0.5em;
     background: #fff;
