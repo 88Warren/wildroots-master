@@ -33,8 +33,6 @@ function toggleNav({target}){
 
 navButton.addEventListener('click', toggleNav);
 
-//contact form
-
 //navbar scroll
 var navScroll = document.querySelector("#navbarPrime");
 
