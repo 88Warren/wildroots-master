@@ -154,14 +154,9 @@
     margin: 2em;
 }
 
-/*all desktops*/
-@media (max-width: 1200px){
-    section.blogCard {grid-template-columns: 1fr; grid-template-areas: "four" "three" "two" "one";}
-}
-
 /*bigger desktop*/
 @media (max-width:1200px){
-    
+    section.blogCard {grid-template-columns: 1fr; grid-template-areas: "four" "three" "two" "one";}    
 }
 
 /*Medium Desktop*/
@@ -176,10 +171,27 @@
 
 /*Tablet*/
 @media (max-width:600px){
-  
+    .card__image{width:18em; height:12em;}
+    .card{width:18em;}
+    .card__body h4{font-size:1.2em;}
+    .card__body p, .blogMore{font-size: .85em;} 
 }
 
 /*mobile*/
 @media (max-width:375px){
-   
+    .cardBody{margin:1.5em; font-weight: 100;}
+    .tag{font-size: .35em;}
+    .card__body h4{font-size:1em;}
+    .card__body p, .blogMore{font-size: .75em;}
+   /* blog-show */
+   .showArticle{margin: 0 2em;}
+   .showArticle h1{font-size: 1.5em;}
+   .date{font-size: 0.35em; padding-top: 1em;}
+   .showArticleMain h3{padding: 0.5em 0;}
+   .showArticleMain p{font-size: .75em; margin:.5em;}
+   .showArticleMain a{font-size: 1em; padding: 0;} 
+   .blogSmallImage{width: 18em; height: 12em; margin:.5em;}
+   .blogSmallImageTall{width:18em; height: 18em;}
+   .credit h6{font-size:.5em;}
+   .back button{margin: 1em;}
 }
