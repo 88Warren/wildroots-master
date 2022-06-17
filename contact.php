@@ -168,7 +168,7 @@ $firstname = $lastname = $email = $phone = $subject = $event = $message = $succe
                 <form action="https://eepurl.com/hpBXjj" target="_blank">
                     <center><button class="bulletBtn newsletter">Click here</button></center>
                 </form>
-                
+            
             </div>
             <div class="contact">
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form">
