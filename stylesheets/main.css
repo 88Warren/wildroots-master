@@ -615,7 +615,7 @@ a:hover{
 
 .CImage{
     grid-area: heroC;
-    background-image: url("../Images/contact/phone.jpg");
+    background-image: url("Images/contact/phone.jpg");
     background-position: center center;
 }
 
