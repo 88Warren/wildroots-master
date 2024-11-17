@@ -239,6 +239,18 @@ a:hover{
     margin: 1em;
 }
 
+.feedback{
+    margin: 1em 0 2em;
+    font-size: larger;
+    text-align: center;
+    font-family: 'dual', Fallback, sans-serif;
+}
+
+.widget {
+    padding: 0;
+    margin: 0;
+}
+
 .WWD{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -584,7 +596,7 @@ a:hover{
     grid-area: leader;
 }
 
-.theLeader h2, .feedback h2{
+.theLeader h2{
     margin-top: 2em;
     text-align: center;
     font-family: 'dual', Fallback, sans-serif;
