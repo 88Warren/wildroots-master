@@ -133,7 +133,7 @@ $firstname = $lastname = $email = $phone = $subject = $event = $message = $succe
     </head>
         <body>
             <nav class="top transparent" id="navbarPrime">
-                <a href="/"><img src="Images/nav/main logo.jpg" alt="Logo Wild Roots" width="120" height="50" /></a>
+                <a href="/"><img src="images/nav/main-logo.jpg" alt="Logo Wild Roots" width="120" height="50" /></a>
                     <div class="menu">
                         <button aria-expanded="false" aria-controls="menu-list">
                             <span class="open">☰</span>
@@ -141,16 +141,16 @@ $firstname = $lastname = $email = $phone = $subject = $event = $message = $succe
                         </button>
                         <ul class="menu-list">
                             <li><a href="/#whatWeDo">What we do</a></li>
-                            <li><a href="/sustainability">Sustainability</a></li>
-                            <li><a href="/blog">Blog</a></li>
-                            <li><a href="/contact">Get in Touch</a></li>
+                            <li><a href="/sustainability.html">Sustainability</a></li>
+                            <li><a href="/blog.html">Blog</a></li>
+                            <li><a href="/contact.php">Get in Touch</a></li>
                         </ul>
                     </div>
                         <div class="social">
-                            <a href="https://www.instagram.com/wildrootskitchenandbar/?hl=en"  target="_blank"><img class="instagram" src="Images/nav/instagram.png" width="25"></a> 
-                            <a href="https://www.facebook.com/pages/category/Caterer/Wild-Roots-Kitchen-and-Bar-100997658454964/"  target="_blank"><img class="facebook" src="Images/nav/facebook.png" width="21"></a> 
-                            <a href="https://www.linkedin.com/company/wild-roots-kitchen-and-bar-ltd"  target="_blank"><img class="linkedin" src="Images/nav/linkedin.png" width="25"></a>
-                            <a href="https://twitter.com/WildRoots_KB"  target="_blank"><img class="twitter" src="Images/nav/twitter.png" width="25"></a>
+                            <a href="https://www.instagram.com/wildrootskitchenandbar/?hl=en"  target="_blank"><img class="instagram" src="images/nav/instagram.png" width="25"></a> 
+                            <a href="https://www.facebook.com/pages/category/Caterer/Wild-Roots-Kitchen-and-Bar-100997658454964/"  target="_blank"><img class="facebook" src="images/nav/facebook.png" width="21"></a> 
+                            <a href="https://www.linkedin.com/company/wild-roots-kitchen-and-bar-ltd"  target="_blank"><img class="linkedin" src="images/nav/linkedin.png" width="25"></a>
+                            <a href="https://twitter.com/WildRoots_KB"  target="_blank"><img class="twitter" src="images/nav/twitter.png" width="25"></a>
                         </div>
                     </nav>
 
@@ -225,16 +225,16 @@ $firstname = $lastname = $email = $phone = $subject = $event = $message = $succe
 
         <div id="footer4">
             <div id="mark">
-                <a href="/"><img src="Images/nav/main logo.jpg" alt="Logo Wild Roots" width="120" height="50" /></a> 
+                <a href="/"><img src="images/nav/main-logo.jpg" alt="Logo Wild Roots" width="120" height="50" /></a> 
             </div>
             <div id="media">
-                <a href="https://www.instagram.com/wildrootskitchenandbar/?hl=en"  target="_blank"><img id="instafoot" src="Images/nav/instagram.png" width="25"></a> 
+                <a href="https://www.instagram.com/wildrootskitchenandbar/?hl=en"  target="_blank"><img id="instafoot" src="images/nav/instagram.png" width="25"></a> 
                 <a href="https://www.facebook.com/pages/category/Caterer/Wild-Roots-Kitchen-and-Bar-100997658454964/"  target="_blank"><img id="facefoot" src="images/nav/facebook.png" width="21"></a>
-                <a href="https://www.linkedin.com/company/wild-roots-kitchen-and-bar-ltd"  target="_blank"><img id="linkedin" src="Images/nav/linkedin.png" width="25"></a>
-                <a href="https://twitter.com/WildRoots_KB"  target="_blank"><img id="twitter" src="Images/nav/twitter.png" width="25"></a>
+                <a href="https://www.linkedin.com/company/wild-roots-kitchen-and-bar-ltd"  target="_blank"><img id="linkedin" src="images/nav/linkedin.png" width="25"></a>
+                <a href="https://twitter.com/WildRoots_KB"  target="_blank"><img id="twitter" src="images/nav/twitter.png" width="25"></a>
             </div>
             <div id="docs">
-                <a href="docs/footer/Booking our Services.pdf"  target="_blank">Booking Our Services</a>|<a href="docs/footer/Sustainability Policy.pdf"  target="_blank">Sustainability Policy</a>|<a href="docs/footer/Website Policies.pdf" target="_blank">Website Policies</a>|<a href="docs/footer/missionStatement.pdf" target="_blank">Mission Statement</a>
+                <a href="docs/footer/booking-our-services.pdf"  target="_blank">Booking Our Services</a>|<a href="docs/footer/sustainability-policy.pdf"  target="_blank">Sustainability Policy</a>|<a href="docs/footer/website-policies.pdf" target="_blank">Website Policies</a>|<a href="docs/footer/mission-statement.pdf" target="_blank">Mission Statement</a>
             </div>
             <div id="copy">
                 <p>© Copyright 2024 Wild Roots Kitchen and Bar</p>

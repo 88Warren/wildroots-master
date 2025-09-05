@@ -7,14 +7,14 @@
 
 @font-face {
     font-family: 'amsterdam';
-    src: url('../Font/AmsterdamOne-eZ12l.ttf'), url('../Font/amsterdamone-ez12l-webfont.woff2');
+    src: url('../font/AmsterdamOne-eZ12l.ttf'), url('../font/amsterdamone-ez12l-webfont.woff2');
     font-display: fallback;
     
 }
 
 @font-face{
     font-family: 'dual';
-    src:url('../Font/Dual-300.ttf'), url('../Font/dual-300-webfont.woff2'), url('../Font/dual-300-webfont.woff');
+    src:url('../font/Dual-300.ttf'), url('../font/dual-300-webfont.woff2'), url('../font/dual-300-webfont.woff');
     font-display: fallback;
 }
 
@@ -166,7 +166,7 @@ a:hover{
 
 .hpImage{
     grid-area: hero;
-    background-image: url("../Images/index/afternoon-tea-532.jpg");
+    background-image: url("../images/index/afternoon-tea-532.jpg");
     background-position: top;
 }
 
@@ -213,7 +213,7 @@ a:hover{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: "banner";
-    background-image: url("../Images/index/afternoon-tea-88.jpg");
+    background-image: url("../images/index/afternoon-tea-88.jpg");
     background-size: cover;
     background-position: center center;
     position: relative;
@@ -321,7 +321,7 @@ a:hover{
 
 .susImage{
     grid-area: heroSC;
-    background-image: url("../Images/sustainable/heroSC.jpg");
+    background-image: url("../images/sustainable/heroSC.jpg");
     background-position: top left;
 }
 
@@ -476,7 +476,7 @@ a:hover{
 .heroImageD{
     grid-area: heroD;
     min-height: 400px;
-    background-image: url("Images/downloads/download.jpg");
+    background-image: url("images/downloads/download.jpg");
     background-size: cover;
     background-position: center left;
     display: flex;
@@ -627,7 +627,7 @@ a:hover{
 
 .CImage{
     grid-area: heroC;
-    background-image: url("Images/contact/phone.jpg");
+    background-image: url("images/contact/phone.jpg");
     background-position: center center;
 }
 
@@ -736,7 +736,7 @@ button.newsletter{
 .heroImageS{
     grid-area: heroS;
     height: 400px;
-    background-image: url("Images/wild-roots-christmas-boxes-11.jpg");
+    background-image: url("images/wild-roots-christmas-boxes-11.jpg");
     background-size: cover;
     background-position: top left;
     display: flex;
@@ -892,7 +892,7 @@ button.newsletter{
 
 .blogImage{
     grid-area: hero;
-    background-image: url("../Images/blogs/heroImage.jpg");
+    background-image: url("/images/blogs/hero-image.jpg");
     background-position: center;
 }
 

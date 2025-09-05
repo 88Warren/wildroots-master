@@ -1,0 +1,22 @@
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wildroots-website
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html  # Mount your local project directory as a volume
+    depends_on:
+      - php
+    restart: always
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    container_name: php-fpm
+    volumes:
+      - .:/var/www/html  # Mount the same project directory as Nginx
+    restart: always
