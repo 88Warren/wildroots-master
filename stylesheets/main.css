@@ -166,7 +166,7 @@ a:hover{
 
 .hpImage{
     grid-area: hero;
-    background-image: url("../images/index/afternoon-tea-532.jpg");
+    background-image: url("../images/index/afternoon-tea.jpg");
     background-position: top;
 }
 
@@ -207,28 +207,6 @@ a:hover{
     letter-spacing: 1px;
     line-height: 1.6;
 }
-
-/* .banner{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "banner";
-    background-image: url("../images/index/afternoon-tea-88.jpg");
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-    z-index: -1;
-    font-weight: 900;
-    }
-
-.bannerImage{
-    grid-area: banner;
-    background-color: rgba(0, 0,  0, 0.4);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    } */
 
 .brag{
     color:#fff;
@@ -321,7 +299,7 @@ a:hover{
 
 .susImage{
     grid-area: heroSC;
-    background-image: url("../images/sustainable/heroSC.jpg");
+    background-image: url("../images/Sustainability/heroSC.jpg");
     background-position: top left;
 }
 
@@ -348,56 +326,6 @@ a:hover{
     letter-spacing: 1px;
     line-height: 1.6;
 }
-
-/* .team{
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 500px;
-    grid-template-areas: "photo h";
-} */
-
-/* .team img{
-    grid-area: photo;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-self: center;
-    border-radius: 20px;
-    margin: 20px;
-} */
-
-/* .team2{
-    display: flex;
-    flex-direction: column;
-    justify-content: first baseline;
-} */
-
-/* .team2 p{
-    grid-area: h;
-    text-align: left;
-    font-family: 'dual', Fallback, sans-serif;
-    font-size: 16px;
-    color: black;
-    padding: 20px;
-    letter-spacing: 1px;
-    line-height: 1.6;
-} */
-/* 
-.team2 h1{
-    font-family: 'amsterdam', Fallback, brush script MT;
-    font-size: 40px;
-    text-align: center;
-    color: #cb5728;
-    padding-top: 40px;
-} */
-
-/* .team2 h2{
-    font-family: 'amsterdam', Fallback, brush script MT;
-    font-size: 40px;
-    text-align: center;
-    color: #cb5728;
-    padding-top: 50px;
-} */
 
 .sustainableMain{
     display: grid;
@@ -466,7 +394,7 @@ a:hover{
 }
 
 /* downloads */
-.heroD{
+/* .heroD{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -618,7 +546,7 @@ a:hover{
 
 .fbLink{
     margin:0 1.2em;
-}
+} */
 
 /*contact page*/
 .C{

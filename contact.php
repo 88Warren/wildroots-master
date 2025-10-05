@@ -150,7 +150,6 @@ $firstname = $lastname = $email = $phone = $subject = $event = $message = $succe
                             <a href="https://www.instagram.com/wildrootskitchenandbar/?hl=en"  target="_blank"><img class="instagram" src="images/nav/instagram.png" width="25"></a> 
                             <a href="https://www.facebook.com/pages/category/Caterer/Wild-Roots-Kitchen-and-Bar-100997658454964/"  target="_blank"><img class="facebook" src="images/nav/facebook.png" width="21"></a> 
                             <a href="https://www.linkedin.com/company/wild-roots-kitchen-and-bar-ltd"  target="_blank"><img class="linkedin" src="images/nav/linkedin.png" width="25"></a>
-                            <a href="https://twitter.com/WildRoots_KB"  target="_blank"><img class="twitter" src="images/nav/twitter.png" width="25"></a>
                         </div>
                     </nav>
 
@@ -231,16 +230,17 @@ $firstname = $lastname = $email = $phone = $subject = $event = $message = $succe
                 <a href="https://www.instagram.com/wildrootskitchenandbar/?hl=en"  target="_blank"><img id="instafoot" src="images/nav/instagram.png" width="25"></a> 
                 <a href="https://www.facebook.com/pages/category/Caterer/Wild-Roots-Kitchen-and-Bar-100997658454964/"  target="_blank"><img id="facefoot" src="images/nav/facebook.png" width="21"></a>
                 <a href="https://www.linkedin.com/company/wild-roots-kitchen-and-bar-ltd"  target="_blank"><img id="linkedin" src="images/nav/linkedin.png" width="25"></a>
-                <a href="https://twitter.com/WildRoots_KB"  target="_blank"><img id="twitter" src="images/nav/twitter.png" width="25"></a>
             </div>
             <div id="docs">
-                <a href="docs/footer/booking-our-services.pdf"  target="_blank">Booking Our Services</a>|<a href="docs/footer/sustainability-policy.pdf"  target="_blank">Sustainability Policy</a>|<a href="docs/footer/website-policies.pdf" target="_blank">Website Policies</a>|<a href="docs/footer/mission-statement.pdf" target="_blank">Mission Statement</a>
+                <a href="docs/footer/wildroots-kitchen-booking-our-services.pdf"  target="_blank">Booking Our Services</a>|
+                <a href="docs/footer/wildroots-kitchen-sustainability-policy.pdf"  target="_blank">Sustainability Policy</a>|
+                <a href="docs/footer/wildroots-kitchen-website-policies.pdf" target="_blank">Website Policies</a>|
+                <a href="docs/footer/wildroots-kitchen-mission-statement.pdf" target="_blank">Mission Statement</a>
             </div>
             <div id="copy">
-                <p>© Copyright 2024 Wild Roots Kitchen and Bar</p>
+                <p>© Copyright 2025 Wild Roots Kitchen and Bar</p>
             </div>
             <div id="info">
-                <!-- <p>Registered in England & Wales | Company no. 12808915 | Registered Address: Bridgend</p> -->
                 <a href="https://www.zoebinning.co.uk/"  target="_blank"><p>Zoë Binning Ltd. T/A Wild Roots Kitchen & Bar</p></a>
             </div>
         </div>

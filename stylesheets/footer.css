@@ -127,7 +127,6 @@
     grid-template-columns: 0.3fr 0.5fr 2fr;
     grid-template-rows: 4.5em;
     grid-template-areas: "mark media docs" "copy copy info";
-    /* gap: 1em; */
     font-size: 0.85em;
     color: #fff;
     font-family: 'dual', Fallback, sans-serif;
@@ -140,10 +139,6 @@
     align-items: flex-start;
     margin: 1.5em;
 }
-
-/* #mark:hover{
-    border: #cb5827 0.5em solid;
-} */
 
 #media{
     grid-area: media;
