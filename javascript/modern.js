@@ -334,10 +334,11 @@ class FormHandler {
             }
         }
         
-        // Phone validation
+        // Phone validation - allow UK numbers starting with 0
         if (field.type === 'tel' && value) {
-            const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-            if (!phoneRegex.test(value.replace(/\s/g, ''))) {
+            const cleanPhone = value.replace(/[\s\-\(\)]/g, '');
+            const phoneRegex = /^(\+44[1-9]\d{8,9}|0[1-9]\d{8,9}|\d{10,15})$/;
+            if (!phoneRegex.test(cleanPhone)) {
                 errorMessage = 'Please enter a valid phone number';
                 isValid = false;
             }
