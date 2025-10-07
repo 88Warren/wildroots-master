@@ -97,7 +97,7 @@
             </div>
         </section>
 
-        <!-- Newsletter Signup -->
+        <!-- Newsletter Signup
         <section class="newsletter-signup">
             <div class="container">
                 <div class="newsletter-content">
@@ -106,7 +106,7 @@
                     <a href="https://eepurl.com/hpBXjj" target="_blank" rel="noopener noreferrer" class="cta-button">Subscribe to Newsletter</a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
             <!-- Clients Section -->
             <section class="clients-section">
