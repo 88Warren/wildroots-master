@@ -38,12 +38,19 @@
             </div>
         </section>
 
+        <!-- Page Break -->
+        <div class="page-break">
+            <div class="break-line">
+                <div class="break-accent"></div>
+            </div>
+        </div>
+
         <!-- Sustainable Journey Section -->
         <section class="sustainable-journey">
             <div class="container">
                 <h2 class="section-title">Our Sustainable Journey</h2>
 
-                <div class="sustainability-grid">
+                <div class="sustainability-grid paddingtop-para">
                     <article class="sustainability-card">
                         <div class="card-image">
                             <img src="./images/sustainability/vegan-treat.jpg" alt="Plant-based catering options" loading="lazy" />
@@ -102,6 +109,12 @@
             </div>
         </section>
 
+        <!-- Page Break -->
+        <div class="page-break">
+            <div class="break-line">
+                <div class="break-accent"></div>
+            </div>
+        </div>
 
         <!-- Call to Action Section -->
         <section class="sustainability-cta">
