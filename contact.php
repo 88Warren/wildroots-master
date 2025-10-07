@@ -1,7 +1,20 @@
 <?php
 
-$firstname_error = $lastname_error = $email_error =  $phone_error = $subject_error = $event_error = $message_error = " ";
-$firstname = $lastname = $email = $phone = $subject = $event = $message = $success = " ";
+// Load environment variables from .env file for development
+if (file_exists(__DIR__ . '/.env')) {
+    $env_vars = file(__DIR__ . '/.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($env_vars as $line) {
+        if (strpos($line, '=') !== false && strpos($line, '#') !== 0) {
+            list($key, $value) = explode('=', $line, 2);
+            $_ENV[trim($key)] = trim($value);
+            putenv(trim($key) . '=' . trim($value));
+        }
+    }
+}
+
+$firstname_error = $lastname_error = $email_error =  $phone_error = $subject_error = $event_error = $message_error = $recaptcha_error = " ";
+$firstname = $lastname = $email = $phone = $subject = $message = $success = " ";
+$event = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["firstname"])) {
@@ -37,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $phone = test_input($_POST["phone"]);
         // Simple phone number validation - just check basic format
         $clean_phone = preg_replace('/[^\d\+]/', '', $phone);
-        
+
         // Very basic validation - just check it has digits and reasonable length
         if (strlen($clean_phone) < 10 || strlen($clean_phone) > 15) {
             $phone_error = "Phone number must be between 10-15 digits";
@@ -63,7 +76,56 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = test_input($_POST["message"]);
     }
 
-    if ($firstname_error == ' ' and $lastname_error == ' ' and $email_error == ' ' and $phone_error == ' ' and $subject_error == ' ' and $event_error == ' ' and $message_error == ' ') {
+    // reCAPTCHA validation (temporarily relaxed for testing)
+    if (empty($_POST['g-recaptcha-response'])) {
+        $recaptcha_error = "Please complete the reCAPTCHA verification";
+    } else {
+        $recaptcha_secret = $_ENV['RECAPTCHA_SECRET'] ?? getenv('RECAPTCHA_SECRET');
+        $recaptcha_response = $_POST['g-recaptcha-response'];
+
+        // Use standard verification endpoint (works for both regular and Enterprise reCAPTCHA)
+        $recaptcha_url = "https://www.google.com/recaptcha/api/siteverify";
+
+        $recaptcha_data = array(
+            'secret' => $recaptcha_secret,
+            'response' => $recaptcha_response,
+            'remoteip' => $_SERVER['REMOTE_ADDR']
+        );
+
+        $recaptcha_options = array(
+            'http' => array(
+                'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method' => 'POST',
+                'content' => http_build_query($recaptcha_data)
+            )
+        );
+
+        $recaptcha_context = stream_context_create($recaptcha_options);
+        $recaptcha_result = file_get_contents($recaptcha_url, false, $recaptcha_context);
+        $recaptcha_json = json_decode($recaptcha_result);
+
+        if (!$recaptcha_json || !$recaptcha_json->success) {
+            $recaptcha_error = "reCAPTCHA verification failed. Please try again.";
+
+
+        } else {
+            // reCAPTCHA v3 uses a score system (0.0 to 1.0)
+            // Higher scores indicate more likely human interaction
+            $score = $recaptcha_json->score ?? 0;
+            $action = $recaptcha_json->action ?? '';
+
+            // Set minimum score threshold (0.5 is recommended)
+            $min_score = 0.5;
+
+            if ($score < $min_score) {
+                $recaptcha_error = "reCAPTCHA verification failed. Please try again.";
+
+
+            }
+        }
+    }
+
+    if ($firstname_error == ' ' and $lastname_error == ' ' and $email_error == ' ' and $phone_error == ' ' and $subject_error == ' ' and $event_error == ' ' and $message_error == ' ' and $recaptcha_error == ' ') {
         $message_body = ' ';
         unset($_POST['submit']);
         foreach ($_POST as $key => $value) {
@@ -85,7 +147,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $subject = "Website Enquiry: " . $subject;
         if (mail($mailTo, $subject, $message, $headers)) {
             $success = "Message sent, thank you for contacting us";
-            $firstname = $lastname = $email = $phone = $subject = $event = $message = " ";
+            $firstname = $lastname = $email = $phone = $subject = $message = " ";
+            $event = "";
         }
     }
 }
@@ -225,6 +288,22 @@ function test_input($data)
                                 <?php endif; ?>
                             </div>
 
+                            <!-- reCAPTCHA v3 (Invisible) -->
+                            <?php if ($recaptcha_error != ' '): ?>
+                                <div class="form-group">
+                                    <span class="form-error" role="alert"><?php echo $recaptcha_error; ?></span>
+                                </div>
+                            <?php endif; ?>
+
+                            <!-- Debug info for development -->
+                            <?php if (($_SERVER['HTTP_HOST'] === 'localhost' || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false) && ($_ENV['RECAPTCHA_SITE_KEY'] ?? getenv('RECAPTCHA_SITE_KEY'))): ?>
+                                <div class="form-group">
+                                    <small style="color: #666; font-size: 0.8em;">
+                                        🔒 Protected by reCAPTCHA v3 (invisible) - Site key: <?php echo substr($_ENV['RECAPTCHA_SITE_KEY'] ?? getenv('RECAPTCHA_SITE_KEY'), 0, 20) . '...'; ?>
+                                    </small>
+                                </div>
+                            <?php endif; ?>
+
                             <button type="submit" name="submit" class="cta-button submit-button">
                                 <span>Send Message</span>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -248,7 +327,7 @@ function test_input($data)
                 <h2 class="section-title">Why Choose Wild Roots?</h2>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon">
+                        <div class="contact-feature-icon">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                             </svg>
@@ -258,9 +337,9 @@ function test_input($data)
                     </div>
 
                     <div class="feature-card">
-                        <div class="feature-icon">
+                        <div class="contact-feature-icon">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H18V0h-2v2H8V0H6v2H4.5C3.12 2 2 3.12 2 4.5v15C2 20.88 3.12 22 4.5 22h15c1.38 0 2.5-1.12 2.5-2.5v-15C22 3.12 20.88 2 19.5 2z" />
+                                <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.82,11.69,4.82,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
                             </svg>
                         </div>
                         <h3>Flexible Service</h3>
@@ -268,7 +347,7 @@ function test_input($data)
                     </div>
 
                     <div class="feature-card">
-                        <div class="feature-icon">
+                        <div class="contact-feature-icon">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                             </svg>

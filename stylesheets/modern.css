@@ -383,6 +383,41 @@ section {
   padding: var(--space-xl) 0;
 }
 
+/* Subtle Page Break */
+.page-break {
+  padding: var(--space-xl) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.break-line {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--border-color) 20%,
+    var(--primary-color) 50%,
+    var(--border-color) 80%,
+    transparent 100%
+  );
+}
+
+.break-accent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--background-white), 0 0 0 5px var(--border-color);
+}
+
 /* Mission Section */
 .mission-content {
   display: grid;
@@ -476,6 +511,10 @@ section {
   margin-bottom: var(--space-sm);
 }
 
+.paddingtop-para {
+  padding-top: var(--space-lg);
+}
+
 .service-links {
   display: flex;
   flex-wrap: wrap;
@@ -537,21 +576,64 @@ section {
   color: var(--text-white);
 }
 
-/* Recycling Guide Section */
-.recycling-section {
-  background: var(--background-light);
+/* Sustainability Section */
+.sustainability-section {
+  padding: var(--space-3xl) 0;
 }
 
-.recycling-guide {
+.sustainability-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sustainability-intro {
   text-align: center;
-  padding: var(--space-xl) 0;
+  margin-bottom: var(--space-lg);
 }
 
-.recycling-guide p {
+.sustainability-intro p {
   font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: var(--space-md);
+  line-height: 1.7;
   color: var(--text-dark);
+  font-weight: 400;
+}
+
+.sustainability-features {
+  display: grid;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.feature-item p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+.feature-item strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.feature-item a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.feature-item a:hover {
+  color: var(--primary-dark);
+}
+
+.sustainability-cta {
+  text-align: center;
 }
 
 /* Support Section */
@@ -589,6 +671,10 @@ section {
 .support-content p {
   text-align: left;
   line-height: 1.7;
+}
+
+.food-bank-heading {
+  font-weight: 800;
 }
 
 /* Clients Section */
@@ -777,6 +863,10 @@ section {
     justify-content: center;
   }
 
+  .feature-item {
+    gap: 30px;
+  }
+
   .nav-toggle {
     display: flex;
     z-index: 10000;
@@ -961,9 +1051,9 @@ section {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.sustainability-intro {
+/* .sustainability-intro {
   padding: var(--space-3xl) 0;
-}
+} */
 
 .intro-content {
   display: grid;
@@ -984,7 +1074,6 @@ section {
 }
 
 .sustainable-journey {
-  background: var(--background-light);
   padding: var(--space-3xl) 0;
 }
 
@@ -1137,7 +1226,7 @@ section {
 }
 
 .sustainability-cta {
-  padding: var(--space-2xl) 0;
+  padding: var(--space-lg) 0;
   text-align: center;
 }
 
@@ -1633,16 +1722,16 @@ section {
   box-shadow: var(--shadow-medium);
 }
 
-.feature-icon {
+.sustainable-feature-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   background: var(--primary-color);
   color: var(--text-white);
   border-radius: 50%;
-  margin: 0 auto var(--space-md);
+  margin: 0 auto;
 }
 
 .feature-card h3 {
@@ -1653,6 +1742,18 @@ section {
 .feature-card p {
   color: var(--text-light);
   line-height: 1.6;
+}
+
+.contact-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--primary-color);
+  color: var(--text-white);
+  border-radius: 50%;
+  margin: 0 auto var(--space-md) auto;
 }
 
 /* Responsive Design for New Pages */
@@ -1756,4 +1857,105 @@ section {
     width: 60px;
     height: 60px;
   }
+}
+
+/* reCAPTCHA Styling */
+.recaptcha-group {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.g-recaptcha {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive reCAPTCHA */
+@media (max-width: 480px) {
+  .g-recaptcha {
+    transform: scale(0.85);
+    transform-origin: 0 0;
+  }
+}
+
+/* reCAPTCHA error styling */
+.recaptcha-group .form-error {
+  margin-top: 0.5rem;
+  text-align: center;
+} /* reC
+APTCHA v3 Badge Positioning */
+.grecaptcha-badge {
+  position: fixed !important;
+  bottom: 14px !important;
+  right: 14px !important;
+  z-index: 9999 !important;
+  opacity: 1 !important;
+}
+
+/* Hide reCAPTCHA badge in development if needed */
+.dev-mode .grecaptcha-badge {
+  display: none !important;
+} /* 
+reCAPTCHA v3 Badge - Smaller Size */
+.grecaptcha-badge {
+  position: fixed !important;
+  bottom: 10px !important;
+  right: 10px !important;
+  z-index: 9999 !important;
+  transform: scale(0.65) !important;
+  transform-origin: bottom right !important;
+  opacity: 0.8 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.grecaptcha-badge:hover {
+  opacity: 1 !important;
+}
+
+/* Make it even smaller on mobile */
+@media (max-width: 768px) {
+  .grecaptcha-badge {
+    transform: scale(0.55) !important;
+    bottom: 8px !important;
+    right: 8px !important;
+  }
+}
+/* Minimal reCAPTCHA v3 Badge */
+.grecaptcha-badge {
+  position: fixed !important;
+  bottom: 6px !important;
+  right: 6px !important;
+  z-index: 9999 !important;
+  transform: scale(0.45) !important;
+  transform-origin: bottom right !important;
+  opacity: 0.6 !important;
+  transition: all 0.3s ease !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.grecaptcha-badge:hover {
+  opacity: 0.9 !important;
+  transform: scale(0.5) !important;
+}
+
+/* Mobile - even more minimal */
+@media (max-width: 768px) {
+  .grecaptcha-badge {
+    transform: scale(0.35) !important;
+    bottom: 4px !important;
+    right: 4px !important;
+    opacity: 0.5 !important;
+  }
+
+  .grecaptcha-badge:hover {
+    transform: scale(0.4) !important;
+    opacity: 0.8 !important;
+  }
+}
+
+/* Style the iframe for better appearance */
+.grecaptcha-badge iframe {
+  border-radius: 4px !important;
 }
