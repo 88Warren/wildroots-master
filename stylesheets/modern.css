@@ -2077,8 +2077,6 @@ reCAPTCHA v3 Badge - Smaller Size */
   color: var(--text-light);
 }
 
-
-
 /* Carousel Indicators */
 .carousel-indicators {
   display: flex;
@@ -2128,19 +2126,17 @@ reCAPTCHA v3 Badge - Smaller Size */
   transform: translateY(-2px);
 }
 
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .reviews-carousel-container {
     margin: 0 var(--space-sm) var(--space-xl);
   }
-  
+
   .review-card {
     padding: var(--space-lg);
     min-height: 320px;
   }
-  
+
   .trustpilot-link {
     font-size: 0.875rem;
   }
@@ -2150,8 +2146,228 @@ reCAPTCHA v3 Badge - Smaller Size */
   .review-card {
     padding: var(--space-md);
   }
-  
+
   .review-title {
     font-size: 1.125rem;
+  }
+}
+.support-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.support-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(203, 88, 39, 0.05),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+  z-index: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.support-grid {
+  position: relative;
+  z-index: 2;
+}
+
+.support-card {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  transition: all var(--transition-medium);
+}
+
+.support-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.support-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.support-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left var(--transition-slow);
+  z-index: 1;
+}
+
+.support-card:hover::before {
+  left: 100%;
+}
+
+.support-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.support-logo {
+  position: relative;
+  z-index: 2;
+  transition: all var(--transition-medium);
+}
+
+.support-logo img {
+  transition: all var(--transition-medium);
+  filter: grayscale(20%);
+}
+
+.support-card:hover .support-logo {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.support-card:hover .support-logo img {
+  filter: grayscale(0%) brightness(1.1);
+}
+
+.support-content {
+  position: relative;
+  z-index: 2;
+}
+
+.support-content h3 a {
+  position: relative;
+  /* transition: all var(--transition-medium); */
+  display: inline-block;
+}
+
+
+
+.support-content h3 a:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+.support-content p {
+  transition: all var(--transition-fast);
+}
+
+.support-card:hover .support-content p {
+  color: var(--text-dark);
+  transform: translateY(-2px);
+}
+
+/* Pulse animation for food bank heading */
+.food-bank-heading {
+  position: relative;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    color: var(--text-dark);
+  }
+  50% {
+    transform: scale(1.02);
+    color: var(--primary-color);
+  }
+}
+
+/* Enhanced link animations */
+.support-content a:not(h3 a) {
+  position: relative;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+  background: linear-gradient(45deg, transparent, transparent);
+}
+
+.support-content a:not(h3 a):hover {
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  color: var(--text-white);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+/* Staggered animation for content elements */
+.support-content > * {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+.support-content h3 {
+  animation-delay: 0.1s;
+}
+
+.support-content p:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+
+.support-content p:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+
+.support-content p:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+.support-content h4 {
+  animation-delay: 0.5s;
+}
+
+.support-content p:last-of-type {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Intersection Observer trigger class */
+.support-section.animate .support-card {
+  animation-play-state: running;
+}
+
+.support-section.animate .support-content > * {
+  animation-play-state: running;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .support-card:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+
+  .support-card:hover .support-logo {
+    transform: scale(1.05) rotate(1deg);
   }
 }
