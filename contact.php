@@ -35,6 +35,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $phone_error = "Phone number is required";
     } else {
         $phone = test_input($_POST["phone"]);
+        // Simple phone number validation - just check basic format
+        $clean_phone = preg_replace('/[^\d\+]/', '', $phone);
+        
+        // Very basic validation - just check it has digits and reasonable length
+        if (strlen($clean_phone) < 10 || strlen($clean_phone) > 15) {
+            $phone_error = "Phone number must be between 10-15 digits";
+        }
+        // If we get here and no error set, the phone number is valid
     }
 
     if (empty($_POST["subject"])) {
@@ -184,7 +192,7 @@ function test_input($data)
 
                                 <div class="form-group">
                                     <label for="phone">Phone Number <span class="required">*</span></label>
-                                    <input type="tel" id="phone" name="phone" value="<?php echo htmlspecialchars($phone); ?>" required aria-describedby="phone-error">
+                                    <input type="tel" id="phone" name="phone" value="<?php echo htmlspecialchars($phone); ?>" required aria-describedby="phone-error" placeholder="e.g. 01234 567890 or 07123 456789">
                                     <?php if ($phone_error != ' '): ?>
                                         <span class="form-error" id="phone-error" role="alert"><?php echo $phone_error; ?></span>
                                     <?php endif; ?>
@@ -225,7 +233,8 @@ function test_input($data)
                             </button>
 
                             <p class="form-note">
-                                <span class="required">*</span> Required fields
+                                <span class="required">*</span> Required fields<br>
+                                By submitting this form, you agree to our <a href="docs/footer/wildroots-kitchen-website-policies.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
                             </p>
                         </form>
                     </div>
