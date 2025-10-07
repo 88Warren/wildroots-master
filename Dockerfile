@@ -1,14 +1,10 @@
-# Use an official Nginx image as the base image
-FROM nginx:alpine
+FROM php:8.2-apache
 
-# Remove the default Nginx configuration
-RUN rm /etc/nginx/conf.d/default.conf
+# Copy your files to the web directory
+COPY . /var/www/html/
 
-# Copy our custom Nginx configuration file
-COPY nginx.conf /etc/nginx/conf.d/
+# Enable Apache rewrite module for .htaccess
+RUN a2enmod rewrite
 
-# Set the working directory (optional but good practice)
-WORKDIR /var/www/html
-
-# Expose port 80
-EXPOSE 80
+# Set proper permissions
+RUN chown -R www-data:www-data /var/www/html

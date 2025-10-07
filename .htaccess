@@ -1,7 +1,15 @@
 RewriteEngine on
 
-#Rewrite for downloads.html
-RewriteRule ^downloads downloads.html [NC,L]
-RewriteRule ^sustainability sustainability.html [NC,L]
-RewriteRule ^blog blog.html [NC,L]
-RewriteRule ^contact contact.php [NC,L]
+# Redirect old HTML files to new PHP files
+RewriteRule ^index\.html$ index.php [R=301,L]
+RewriteRule ^sustainability\.html$ sustainability.php [R=301,L]
+RewriteRule ^blog\.html$ blog.php [R=301,L]
+
+# Clean URL rewrites
+RewriteRule ^downloads$ downloads.html [NC,L]
+RewriteRule ^sustainability$ sustainability.php [NC,L]
+RewriteRule ^blog$ blog.php [NC,L]
+RewriteRule ^contact$ contact.php [NC,L]
+
+# Set index.php as default
+DirectoryIndex index.php index.html
