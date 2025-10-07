@@ -114,16 +114,45 @@ if (typeof window.WildRootsApp !== "undefined") {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate-in");
+            
+            // Special handling for support section
+            if (entry.target.classList.contains("support-section")) {
+              entry.target.classList.add("animate");
+              this.animateSupportSection(entry.target);
+            }
           }
         });
       }, observerOptions);
 
       // Observe elements that should animate in
       const animateElements = document.querySelectorAll(
-        ".service-card, .support-card, .client-card"
+        ".service-card, .support-card, .client-card, .support-section"
       );
       animateElements.forEach((el) => {
         observer.observe(el);
+      });
+    }
+
+    animateSupportSection(section) {
+      const cards = section.querySelectorAll('.support-card');
+      const title = section.querySelector('.section-title');
+      
+      // Animate title first
+      if (title) {
+        title.style.transform = 'translateY(-20px)';
+        title.style.opacity = '0';
+        setTimeout(() => {
+          title.style.transition = 'all 0.8s ease-out';
+          title.style.transform = 'translateY(0)';
+          title.style.opacity = '1';
+        }, 100);
+      }
+      
+      // Stagger card animations
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.style.animationPlayState = 'running';
+        }, 200 + (index * 200));
       });
     }
 
