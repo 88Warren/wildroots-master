@@ -118,7 +118,7 @@
                                         <path d="M19 7H16V6A4 4 0 0 0 8 6V7H5A1 1 0 0 0 4 8V19A3 3 0 0 0 7 22H17A3 3 0 0 0 20 19V8A1 1 0 0 0 19 7ZM10 6A2 2 0 0 1 14 6V7H10V6ZM18 19A1 1 0 0 1 17 20H7A1 1 0 0 1 6 19V9H8V10A1 1 0 0 0 10 10A1 1 0 0 0 10 10V9H14V10A1 1 0 0 0 16 10A1 1 0 0 0 14 10V9H18V19Z" fill="currentColor"/>
                                     </svg>
                                 </div>
-                                <p>Our packaging is all <strong>sustainably-sourced</strong> (<a href="docs/index/Wildroots-Kitchen-Recycling .pdf" target="_blank" rel="noopener noreferrer">check out our nifty recycling guide</a>)</p>
+                                <p>our packaging is all <strong>sustainably-sourced</strong> (check out our nifty <a href="docs/index/Wildroots-Kitchen-Recycling .pdf" target="_blank" rel="noopener noreferrer">recycling guide</a>)</p>
                             </div>
 
                             <div class="feature-item">
@@ -127,7 +127,7 @@
                                         <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
                                     </svg>
                                 </div>
-                                <p>We offer <strong>Plant-based and gluten-free options</strong> as standard</p>
+                                <p>we offer <strong>plant-based and gluten-free options</strong> as standard</p>
                             </div>
                             
                             <div class="feature-item">
@@ -136,7 +136,7 @@
                                         <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L13.5 2.5L16.17 5.17C15.24 5.06 14.32 5 13.4 5C10.3 5 7.4 5.84 5.05 7.35L6.35 8.65C8.2 7.52 10.5 7 13 7C15.5 7 17.8 7.52 19.65 8.65L21 9ZM1 11V13L7 19L8.5 17.5L5.83 14.83C6.76 14.94 7.68 15 8.6 15C11.7 15 14.6 14.16 16.95 12.65L15.65 11.35C13.8 12.48 11.5 13 9 13C6.5 13 4.2 12.48 2.35 11.35L1 11Z" fill="currentColor"/>
                                     </svg>
                                 </div>
-                                <p>We only use <strong>organic, locally sourced meat & fish</strong></p>
+                                <p>we only use <strong>organic, locally sourced meat & fish</strong></p>
                             </div>
                             
                             <div class="feature-item">
@@ -145,12 +145,12 @@
                                         <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7.5 13.5 12.5 12.5 17 8Z" fill="currentColor"/>
                                     </svg>
                                 </div>
-                                <p>And you will <strong>never find palm oil</strong> used in any of our products</p>
+                                <p>and you will <strong>never find palm oil</strong> used in any of our products</p>
                             </div>
                         </div>
                         
                         <div class="sustainability-cta">
-                            <a href="/sustainability.php" class="cta-button">Find out more about our Sustainability mission here</a>
+                            <a href="/sustainability.php" class="cta-button">Find out more about our sustainability journey</a>
                         </div>
                     </div>
                 </div>
