@@ -79,7 +79,7 @@
                             </div>
                             <div class="service-content">
                                 <h3>Buffets & Party Catering</h3>
-                                <p class="paddingtop-para">Our fabulous buffets, canapés & afternoon teas are delivered fresh, directly to your venue on the day of your special occasion, so you can celebrate in style.</p>
+                                <p class="paddingtop-para">Our fabulous buffets & canapés are delivered fresh, directly to your venue on the day of your special occasion, so you can celebrate in style.</p>
                                 
                                 <div class="service-links">
                                     <a href="docs/index/Wildroots-Kitchen-Celebration-Finger-Buffet.pdf" target="_blank" class="menu-link">Celebration Finger Buffet</a>
