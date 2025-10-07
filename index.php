@@ -159,12 +159,149 @@
             <!-- Reviews Section -->
             <section class="reviews-section">
                 <div class="container">
-                    <h2 class="section-title">Reviews</h2>
-                    <p class="reviews-intro">Find out what our customers say about us or leave us a review.</p>
-                    <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="602ee6a6bd6e8b0001bb4ee7" data-style-height="100%" data-style-width="100%" data-scroll-to-list="false" data-allow-robots="true">
-                        <a href="https://www.trustpilot.com/review/www.wildrootskitchenandbar.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+                    <h2 class="section-title">What Our Customers Say</h2>
+                    <p class="reviews-intro">Discover why our clients love Wild Roots Kitchen & Bar</p>
+                    
+                    <!-- Reviews Carousel -->
+                    <div class="reviews-carousel-container">
+                        <div class="reviews-carousel" id="reviewsCarousel">
+                            <!-- Sample Trustpilot-style reviews -->
+                            <div class="review-card active">
+                                <div class="review-header">
+                                    <div class="review-stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                </div>
+                                <h3 class="review-title">Top class presentation!</h3>
+                                <p class="review-text">
+                                    The Wild Roots team provided a buffet lunch for 20 of us at a private visit to Llantrisant Guildhall. 
+                                    As always, a wonderful welcome there, and a most enjoyable couple of hours with the innovative buffet. 
+                                    High quality presentation and everything fresh, well labelled and scrumptious.
+                                </p>
+                                <div class="review-author">
+                                    <div class="author-info">
+                                        <span class="author-name">Jane</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                </div>
+                                <h3 class="review-title">Wild Roots supplied the food and…</h3>
+                                <p class="review-text">
+                                    Wild Roots supplied the Welsh cakes and sausage rolls for our Memoria Cardiff & Vale of Glamorgan open day in July, so only leaves me to tell you that the 100 plus attendees complimented their utter quality to a man! 
+                                    Not a crumb was left, delivered timely as promised in fabulous recyclable materials and really added some finesse to to the provision and we were really impressed and highly recommend
+                                </p>
+                                <div class="review-author">
+                                    <div class="author-info">
+                                        <span class="author-name">Frank M.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                </div>
+                                <h3 class="review-title">A glass raised to Wild Roots Kitchen & Bar Ltd.</h3>
+                                <p class="review-text">
+                                   I can't thank Zoë, Paul and the team enough for a fantastic Beaujolais Day event at The Thirsty Elephant in Pontyclun. 
+                                   The food was great, and all ethically sourced and the staff were pleasant and always on hand to help. 
+                                   A thoroughly enjoyable and rewarding day.
+                                </p>
+                                <div class="review-author">
+                                    <div class="author-info">
+                                        <span class="author-name">Al Davis</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                </div>
+                                <h3 class="review-title">Simply Wow!</h3>
+                                <p class="review-text">
+                                    Wild Roots Kitchen & Bar was recommended by someone online. 
+                                    After seeing the beautiful pictures of the food and drink, I thought it would be a good idea to order a selection for Valentines.
+                                    All I can say is, they are a pleasure to speak too, which is hard to come by nowadays. 
+                                    And we'll the food... Was simply stunning. The attention to detail of each 'treat', made it a pleasure to eat :)
+                                </p>
+                                <div class="review-author">
+                                    <div class="author-info">
+                                        <span class="author-name">Ricki</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                </div>
+                                <h3 class="review-title">The Team at Wild Roots were fantastic…</h3>
+                                <p class="review-text">
+                                    The Team at Wild Roots were fantastic as usual. 
+                                    They catered for our team meeting providing 6 lunch's that were both delicious and sustainable. 
+                                    I would not hesitate to use their services again or to recommend them on to business associates, Friends or Family.
+                                </p>
+                                <div class="review-author">
+                                    <div class="author-info">
+                                        <span class="author-name">Craig</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        
+                        <!-- Carousel Indicators -->
+                        <div class="carousel-indicators">
+                            <button class="indicator active" data-slide="0" aria-label="Go to review 1"></button>
+                            <button class="indicator" data-slide="1" aria-label="Go to review 2"></button>
+                            <button class="indicator" data-slide="2" aria-label="Go to review 3"></button>
+                            <button class="indicator" data-slide="3" aria-label="Go to review 4"></button>
+                            <button class="indicator" data-slide="4" aria-label="Go to review 5"></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Review Actions -->
+                    <div class="review-actions">
+                        <a href="https://www.trustpilot.com/review/www.wildrootskitchenandbar.co.uk" target="_blank" rel="noopener" class="trustpilot-link">
+                            Check out more reviews on Trustpilot
+                        </a>
                     </div>
                 </div>
+
             </section>
 
             <!-- Support Section -->

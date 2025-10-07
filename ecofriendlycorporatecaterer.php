@@ -55,7 +55,7 @@
                             <p>And we're working hard to continue to grow that side of the business, so if you are an office team looking for something other than the usual business lunch buffet, or you're still organising department meetings via zoom and missing out on a fabulous lunchtime solution for your delegates – then check out our <a href="/#what-we-do">sample menus</a> and <a href="/contact.php">get in touch</a> to book our planet-saving catering delivered to your door, right in time for lunch!</p>
                             
                             <div class="article-image-inline">
-                                <img src="./images/blogs/four/wildroots-kitchen-zoe-delivering.jpg" alt="Zoe Binning delivering working lunches" loading="lazy" />
+                                <img src="./images/blogs/four/wildroots-kitchen-zoe-delivering.jpg" alt="Zoë Binning delivering working lunches" loading="lazy" />
                             </div>
                             
                             <p>Wild Roots Kitchen & Bar puts <a href="/sustainability.php">sustainability</a>, eco-friendly and low-waste catering practices combined with incredible food & front of house service, at the heart of everything we do.</p>
